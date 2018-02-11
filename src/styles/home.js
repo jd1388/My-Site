@@ -59,7 +59,7 @@ export default {
         textAlign: 'justify'
     },
     hyperlink: {
-        color: blue
+        color: 'white'
     },
     skillRowContainer: {
         display: 'flex',
