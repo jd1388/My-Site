@@ -1,5 +1,4 @@
-const blue = '#0984E3';
-const black = '#232323';
+import Colors from './Colors';
 
 export default {
     content: {
@@ -7,7 +6,7 @@ export default {
     },
     hero: {
         fontSize: '160pt',
-        color: blue,
+        color: Colors.blue,
         fontWeight: '400',
         paddingTop: '25vh',
         marginBottom: '0',
@@ -24,7 +23,7 @@ export default {
         textAlign: 'justify',
         fontWeight: 300,
         fontFamily: 'Roboto, san-serif',
-        color: black,
+        color: Colors.black,
         flexGrow: 1,
         display: 'flex',
         alignItems: 'center'

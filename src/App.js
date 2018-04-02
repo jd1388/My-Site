@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Experience from './components/Experience';
+
 import Styles from './styles/App';
 
 const About = () => (
@@ -15,7 +17,7 @@ const About = () => (
                 President of Iowa State's student branch of the Institute of
                 Electrical and Electronics Engineers and as a member of the
                 Electrical and Computer Engineering Department's Student Advisory
-                Committee. When I'm not knee-deep in side projects, I'm probably
+                Committee. When I'm not knee-deep in projects, I'm probably
                 playing video games or disc golf with friends.
             `}
         </div>
@@ -27,6 +29,7 @@ class App extends Component {
         return (
             <div style={Styles.content}>
                 <About/>
+                <Experience/>
             </div>
         );
     }
