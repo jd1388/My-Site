@@ -5,7 +5,7 @@ import Styles from './styles/App';
 const About = () => (
     <div style={Styles.aboutContainer}>
         <h1 style={Styles.hero}>Hello,</h1>
-        <p>
+        <div style={Styles.sectionContent}>
             {`
                 My name is Jared Griffin. I'm a junior in Computer Engineering at
                 Iowa State University. Through side projects that I've worked on
@@ -18,14 +18,14 @@ const About = () => (
                 Committee. When I'm not knee-deep in side projects, I'm probably
                 playing video games or disc golf with friends.
             `}
-        </p>
+        </div>
     </div>
 );
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <div style={Styles.content}>
                 <About/>
             </div>
         );
