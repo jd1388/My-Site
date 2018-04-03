@@ -31,7 +31,7 @@ export const workExperience = {
             dates: 'May 2017 - August 2017',
             position: 'Software Engineering Apprentice',
             description: `
-                I worked on a team rewritting the website for Adventureland Resort . This involved learning to 
+                I worked on a team rewritting the website for Adventureland Resort. This involved learning to 
                 use PHP, specifically the Laravel framework, as well as using Vue JS for the first time, and using 
                 Django for our CMS. With this project, I was also able to gain an understanding of cloud 
                 infrastructure, specifically AWS and how CloudFormation works.
