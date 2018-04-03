@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Experience from './components/Experience';
+import Skills from './components/Skills';
 
 import Styles from './styles/App';
 
@@ -30,6 +31,7 @@ class App extends Component {
             <div style={Styles.content}>
                 <About/>
                 <Experience/>
+                <Skills/>
             </div>
         );
     }
