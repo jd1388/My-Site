@@ -11,11 +11,11 @@ const ExperienceEntry = props => {
         <div style={Styles.experienceEntryContainer}>
             <div style={Styles.experienceEntryLeftColumn}>
                 <h4 style={Styles.experienceEntryHeader}>{location}</h4>
-                <p style={Styles.experienceEntryContent}>{dates}</p>
+                <p style={Styles.experienceEntryDates}>{dates}</p>
             </div>
             <div style={Styles.experienceEntryRightColumn}>
                 <h4 style={Styles.experienceEntryHeader}>{position}</h4>
-                <p style={Styles.experienceEntryContent}>{description}</p>
+                <p style={Styles.experienceEntryDescription}>{description}</p>
             </div>
         </div>
     )

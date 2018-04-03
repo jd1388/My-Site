@@ -34,8 +34,12 @@ export default {
     experienceEntryHeader: {
         fontWeight: '400'
     },
-    experienceEntryContent: {
+    experienceEntryDates: {
         fontWeight: '300'
+    },
+    experienceEntryDescription: {
+        fontWeight: '300',
+        textAlign: 'justify'
     },
     experienceEntryLeftColumn: {
         width: '30%'
