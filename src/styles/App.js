@@ -17,7 +17,8 @@ export default {
         height: '95vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        minHeight: '1000px'
     },
     sectionContent: {
         textAlign: 'justify',

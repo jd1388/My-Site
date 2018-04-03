@@ -12,8 +12,8 @@ export default {
         alignItems: 'center'
     },
     experienceContent: {
-        padding: '0 25%',
-        width: '50%'
+        padding: '50px 25%',
+        width: '50%',
     },
     header: {
         fontWeight: 'normal',
@@ -41,6 +41,7 @@ export default {
         width: '30%'
     },
     experienceEntryRightColumn: {
-        width: '70%'
+        width: '65%',
+        paddingLeft: '5%'
     }
 };
