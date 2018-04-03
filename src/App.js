@@ -5,6 +5,7 @@ import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 
 import Experience from './components/Experience';
+import Projects from './components/Projects';
 import Skills from './components/Skills';
 
 import Styles from './styles/App';
@@ -68,6 +69,7 @@ class App extends Component {
             <div style={Styles.content}>
                 <About/>
                 <Experience/>
+                <Projects/>
                 <Skills/>
                 <Footer/>
             </div>
