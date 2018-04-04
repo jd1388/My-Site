@@ -19,8 +19,8 @@ const FooterLink = ({ url, icon, link }) => (
     </div>
 )
 
-const Footer = () => (
-    <div style={Styles.footerContainer}>
+const Footer = ({ mobile }) => (
+    <div style={mobile ? Styles.mobileFooterContainer : Styles.footerContainer}>
         <FooterLink
             url='https://www.linkedin.com/in/griffinjared/'
             link='LinkedIn'

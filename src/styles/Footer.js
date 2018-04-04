@@ -25,5 +25,16 @@ export default {
     },
     footerLinkText: {
         paddingLeft: '5px'
+    },
+    mobileFooterContainer: {
+        backgroundColor: Colors.gray,
+        height: '5vh',
+        minHeight: '100px',
+        color: Colors.white,
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        padding: '0 10%',
+        fontSize: '12pt'
     }
 };

@@ -18,7 +18,7 @@ class App extends Component {
                 <Experience mobile={isMobile}/>
                 <Projects mobile={isMobile}/>
                 <Skills mobile={isMobile}/>
-                <Footer/>
+                <Footer mobile={isMobile}/>
             </div>
         );
     }
