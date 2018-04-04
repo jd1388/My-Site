@@ -17,12 +17,18 @@ const Star = ({ strength, limit }) => (
     </span>
 );
 
-const Skill = ({ skill, strength, index }) => (
-    <div style={Styles.skillEntryContainer}>
-        <span style={index % 3 < 2 ? Styles.skillEntryHeader: Object.assign({}, Styles.skillEntryHeader, { marginLeft: '7.5%' })}>
+const Skill = ({ skill, strength, index, mobile }) => (
+    <div style={mobile ? Styles.mobileSkillEntryContainer : Styles.skillEntryContainer}>
+        <span 
+            style={
+                index % 3 < 2 || mobile ? 
+                    Styles.skillEntryHeader :
+                    Object.assign({}, Styles.skillEntryHeader, { marginLeft: '7.5%' })
+            }
+        >
             {skill}
         </span>
-        <div style={index % 3 < 2 ? Object.assign({}, { marginRight: '7.5%' }) : {}}>
+        <div style={index % 3 < 2  && !mobile ? Object.assign({}, { marginRight: '7.5%' }) : {}}>
             <Star strength={strength} limit={0}/>
             <Star strength={strength} limit={1}/>
             <Star strength={strength} limit={2}/>
@@ -32,18 +38,26 @@ const Skill = ({ skill, strength, index }) => (
     </div>
 );
 
-const SkillsSection = props => {
-    const { header, skills } = props.sectionInfo;
+const SkillsSection = ({ sectionInfo, mobile }) => {
+    const { header, skills } = sectionInfo;
 
     let skillEntries = [];
     let key = 0;
 
     skills.forEach((skillGroup, index)=> {
         skillGroup.forEach(skill => {
-            skillEntries.push(<Skill skill={skill} strength={5 - index} key={key} index={key}/>)
+            skillEntries.push(<Skill skill={skill} strength={5 - index} key={key} index={key} mobile={mobile}/>)
             key++;
         });
     });
+
+    if (mobile)
+        return (
+            <div>
+                <h3 style={Styles.mobileSubheader}>{header}</h3>
+                {skillEntries}
+            </div>
+        )
 
     return (
         <div>
@@ -55,13 +69,13 @@ const SkillsSection = props => {
     );
 };
 
-const Skills = () => (
+const Skills = ({ mobile }) => (
     <div style={Styles.skillsContainer}>
-        <div style={Styles.skillsContent}>
-            <h2 style={Styles.header}>Skills</h2>
-            <SkillsSection sectionInfo={languageAndFrameworks}/>
-            <SkillsSection sectionInfo={infrastructure}/>
-            <SkillsSection sectionInfo={methodologies}/>
+        <div style={mobile ? Styles.mobileSkillsContent : Styles.skillsContent}>
+            <h2 style={mobile ? Styles.mobileHeader : Styles.header}>Skills</h2>
+            <SkillsSection sectionInfo={languageAndFrameworks} mobile={mobile}/>
+            <SkillsSection sectionInfo={infrastructure} mobile={mobile}/>
+            <SkillsSection sectionInfo={methodologies} mobile={mobile}/>
         </div>
     </div>
 );

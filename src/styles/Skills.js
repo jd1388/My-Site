@@ -42,5 +42,25 @@ export default {
     },
     skillEntryHeader: {
         fontWeight: '300'
+    },
+    mobileSkillsContent: {
+        padding: '50px 10%'
+    },
+    mobileHeader: {
+        fontWeight: 'normal',
+        color: Colors.blue,
+        textAlign: 'center',
+        fontSize: '36pt',
+        margin: 0
+    },
+    mobileSubheader: {
+        fontWeight: '300',
+        color: Colors.blue,
+        fontSize: '18pt'
+    },
+    mobileSkillEntryContainer: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        paddingBottom: '5px'
     }
 };
