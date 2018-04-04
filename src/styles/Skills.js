@@ -44,7 +44,8 @@ export default {
         fontWeight: '300'
     },
     mobileSkillsContent: {
-        padding: '50px 10%'
+        padding: '50px 10%',
+        width: '100%'
     },
     mobileHeader: {
         fontWeight: 'normal',
@@ -61,6 +62,6 @@ export default {
     mobileSkillEntryContainer: {
         display: 'flex',
         justifyContent: 'space-between',
-        paddingBottom: '5px'
+        padding: '0 5% 5px'
     }
 };
