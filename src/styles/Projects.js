@@ -2,7 +2,7 @@ import Colors from './Colors';
 
 export default {
     projectsContainer: {
-        height: '95vh',
+        minHeight: '95vh',
         backgroundColor: Colors.silver,
         fontFamily: 'Roboto, san-serif',        
         color: Colors.white,
@@ -31,5 +31,20 @@ export default {
     },
     projectContainer: {
         paddingBottom: '5px'
+    },
+    mobileProjectContent: {
+        padding: '50px 10%'
+    },
+    mobileHeader: {
+        fontWeight: 'normal',
+        fontSize: '36pt',
+        margin: 0,
+        textAlign: 'center',
+        color: Colors.blue
+    },
+    mobileProjectName: {
+        fontWeight: '300',
+        fontSize: '18pt',
+        color: Colors.blue
     }
 };

@@ -13,7 +13,7 @@ export const infrastructure = {
     header: 'Infrastructure',
     skills: [
         [],
-        ['AWS'],
+        ['AWS', 'Git'],
         ['Docker'],
         [],
         []

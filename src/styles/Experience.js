@@ -17,14 +17,14 @@ export default {
     },
     header: {
         fontWeight: 'normal',
-        color: 'white',
+        color: Colors.white,
         textAlign: 'center',
         fontSize: '48pt',
         margin: 0
     },
     subheader: {
         fontWeight: '300',
-        color: 'white',
+        color: Colors.white,
         fontSize: '22pt'
     },
     experienceEntryContainer: {
@@ -47,5 +47,23 @@ export default {
     experienceEntryRightColumn: {
         width: '65%',
         paddingLeft: '5%'
+    },
+    mobileExperienceContent: {
+        padding: '50px 10%'
+    },
+    mobileHeader: {
+        fontWeight: 'normal',
+        color: Colors.white,
+        textAlign: 'center',
+        fontSize: '36pt',
+        margin: 0
+    },
+    mobileSubheader: {
+        fontWeight: '300',
+        color: Colors.white,
+        fontSize: '18pt'
+    },
+    mobileExperienceEntryContainer: {
+        paddingBottom: '5px'
     }
 };
