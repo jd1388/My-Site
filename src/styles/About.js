@@ -5,7 +5,7 @@ export default {
         fontSize: '160pt',
         color: Colors.blue,
         fontWeight: '400',
-        paddingTop: '25vh',
+        paddingTop: '20vh',
         marginBottom: '0',
         alignSelf: 'center'
     },
