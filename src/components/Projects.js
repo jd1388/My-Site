@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { terra, giphySearch } from '../data/Projects';
+import { terra, giphySearch, codeCouch, walkMeHome } from '../data/Projects';
 
 import Styles from '../styles/Projects';
 
@@ -21,6 +21,8 @@ const Projects = ({ mobile }) => (
             <h2 style={mobile ? Styles.mobileHeader : Styles.header}>Projects</h2>
             <Project projectInfo={terra} mobile={mobile}/>
             <Project projectInfo={giphySearch} mobile={mobile}/>
+            <Project projectInfo={codeCouch} mobile={mobile}/>
+            <Project projectInfo={walkMeHome} mobile={mobile}/>
         </div>
     </div>
 );

@@ -18,3 +18,23 @@ export const giphySearch = {
         Giphy Search was born. Giphy Search wraps the Giphy API, specifically their search, trending, and random APIs.
     `
 };
+
+export const codeCouch = {
+    name: 'Code Couch',
+    description: `
+        This is a project that I led for one of my classes. The goal of Code Couch was to build a platform that mixed together 
+        aspects of GitHub, Trello, LinkedIn, and StackOverflow in a single website. The project was built using React and 
+        Redux for the frontend and had a Node Express backend. 
+    `
+};
+
+export const walkMeHome = {
+    name: 'WalkMeHome',
+    description: `
+        This is another project that I did for one of my classes. The idea behind WalkMeHome as to have a navigation app 
+        that would allow someone to "walk you home". The way we did this was having one of the user's friends on the app 
+        watch their progress while walking to their destination. This way, the user could walk knowing that if they stopped 
+        suddenly, someone would know that something wasn't right. We built our app using React Native, and the backend for 
+        it was built with Node Express.
+    `
+};
