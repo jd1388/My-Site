@@ -15,7 +15,7 @@ class App extends Component {
         return (
             <div style={isMobile ? Styles.mobileContent : Styles.content}>
                 <About mobile={isMobile}/>
-                <Experience/>
+                <Experience mobile={isMobile}/>
                 <Projects/>
                 <Skills/>
                 <Footer/>
