@@ -10,9 +10,11 @@ import Styles from './styles/App';
 
 class App extends Component {
     render() {
+        const isMobile = window.innerWidth < 800;
+
         return (
-            <div style={Styles.content}>
-                <About/>
+            <div style={isMobile ? Styles.mobileContent : Styles.content}>
+                <About mobile={isMobile}/>
                 <Experience/>
                 <Projects/>
                 <Skills/>

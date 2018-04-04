@@ -26,4 +26,20 @@ export default {
         display: 'flex',
         alignItems: 'center'
     },
+    mobileHero: {
+        fontSize: '100pt',
+        color: Colors.blue,
+        fontWeight: '400',
+        paddingTop: '15vh',
+        marginBottom: '0',
+        alignSelf: 'center'
+    },
+    mobileAboutContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '0 10%',
+        height: '95vh',
+        minHeight: '800px'
+    }
 };
