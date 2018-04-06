@@ -40,6 +40,7 @@ export default {
         alignItems: 'center',
         padding: '0 10%',
         height: '95vh',
-        minHeight: '800px'
+        minHeight: '800px',
+        fontFamily: 'Roboto, san-serif'
     }
 };
