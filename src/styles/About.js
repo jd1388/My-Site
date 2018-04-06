@@ -15,12 +15,12 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        minHeight: '1000px'
+        minHeight: '1000px',
+        fontFamily: 'Roboto, san-serif'
     },
     sectionContent: {
         textAlign: 'justify',
         fontWeight: 300,
-        fontFamily: 'Roboto, san-serif',
         color: Colors.black,
         flexGrow: 1,
         display: 'flex',
