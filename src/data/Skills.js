@@ -1,9 +1,9 @@
 export const languageAndFrameworks = {
     header: 'Languages & Frameworks',
     skills: [
-        ['JavaScript', 'React', 'Redux'],
-        ['CSS', 'HTML 5', 'Java', 'Laravel', 'Lumen', 'Node', 'PHP', 'Sass'],
-        ['C', 'Express', 'Knex', 'MySQL', 'React Native', 'Vue'],
+        ['JavaScript', 'Jest', 'React', 'Redux'],
+        ['CSS', 'HTML 5', 'Mocha', 'Node', 'PHP', 'React Native', 'Sass'],
+        ['Babel', 'C', 'Express', 'Java', 'Knex', 'Laravel', 'Lumen', 'MySQL', 'Vue'],
         ['Python'],
         ['Django', 'Spring'],
     ]
