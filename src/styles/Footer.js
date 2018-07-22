@@ -24,7 +24,8 @@ export default {
         height: '20px'
     },
     footerLinkText: {
-        paddingLeft: '5px'
+        paddingLeft: '5px',
+        paddingTop: '2px'
     },
     mobileFooterContainer: {
         backgroundColor: Colors.gray,
