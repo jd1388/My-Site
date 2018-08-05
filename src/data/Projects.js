@@ -10,6 +10,16 @@ export const terra = {
     `
 };
 
+export const bubblePopper = {
+    name: 'Bubble Popper',
+    description: `
+        I was with a few friends when they started talking about bubble wrap. One of them mentioned that they couldn't believe 
+        that there wasn't a cookie clicker-like game for bubble wrap. So I broke out the laptop and made it happen. In the 
+        process of making the game, I learned some practical skills like how to store a cookie on a user's browser and how to 
+        create images. This was also the first website I tried to turn into a progressive web app.
+    `
+}
+
 export const giphySearch = {
     name: 'Giphy Search',
     description: `
