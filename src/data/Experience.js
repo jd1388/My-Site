@@ -28,13 +28,13 @@ export const workExperience = {
     experiences: [
         {
             location: 'Source Allies, Inc.',
-            dates: 'May 2018 - Present',
+            dates: 'May 2018 - August 2018',
             position: 'Software Engineering Apprentice',
             description: `
-                I am working with a team of apprentices to create a mobile app for service technicians for John Deere 
+                I worked on a team of apprentices to create a mobile app for service technicians for John Deere 
                 dealerships so that they can update their locations with details on what they are doing. The mobile 
                 app was built using React Native so that we could develop for Android and iOS at the same time. We are 
-                also using AWS lambdas to handle any request that we need to make to John Deere.
+                also using AWS lambdas to proxy OAuth 1.0a requests that we need to make to John Deere.
             `
         },
         {
