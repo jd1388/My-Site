@@ -12,6 +12,7 @@ export default {
         transform: 'skewY(2deg)',
         boxShadow: '0px 4px 20px 0px rgba(0,0,0,0.75)',
         border: '1 solid transparent',
+        padding: '5vh 0',
         filter: `url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter id="gaussian_blur"><feGaussianBlur in="SourceGraphic" stdDeviation="0" /></filter></defs></svg>#gaussian_blur')`
     },
     projectContent: {
