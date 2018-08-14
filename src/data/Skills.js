@@ -23,7 +23,7 @@ export const infrastructure = {
 export const methodologies = {
     header: 'Methodologies',
     skills: [
-        ['Agile'],
+        ['Agile', 'Pair Programming', 'TDD'],
         ['Scrum'],
         [],
         [],
