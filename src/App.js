@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import About from './components/About';
 import Experience from './components/Experience';
@@ -8,20 +8,18 @@ import Footer from './components/Footer';
 
 import Styles from './styles/App';
 
-class App extends Component {
-    render() {
-        const isMobile = window.innerWidth < 800;
+const App = () => {
+  const isMobile = window.innerWidth < 800;
 
-        return (
-            <div style={isMobile ? Styles.mobileContent : Styles.content}>
-                <About mobile={isMobile}/>
-                <Experience mobile={isMobile}/>
-                <Projects mobile={isMobile}/>
-                <Skills mobile={isMobile}/>
-                <Footer mobile={isMobile}/>
-            </div>
-        );
-    }
-}
+  return (
+    <div style={isMobile ? Styles.mobileContent : Styles.content}>
+      <About mobile={isMobile} />
+      <Experience mobile={isMobile} />
+      <Projects mobile={isMobile} />
+      <Skills mobile={isMobile} />
+      <Footer mobile={isMobile} />
+    </div>
+  );
+};
 
 export default App;

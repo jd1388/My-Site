@@ -7,36 +7,37 @@ import EmailIcon from 'mdi-react/EmailIcon';
 import Styles from '../styles/Footer';
 
 const FooterLink = ({ url, icon, link }) => (
-    <div>
-        <a
-            href={url}
-            target="_blank"
-            style={Styles.footerLink}
-        >
-            <span>{icon}</span>
-            <span style={Styles.footerLinkText}>{link}</span>
-        </a>
-    </div>
-)
+  <div>
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener"
+      style={Styles.footerLink}
+    >
+      <span>{icon}</span>
+      <span style={Styles.footerLinkText}>{link}</span>
+    </a>
+  </div>
+);
 
 const Footer = ({ mobile }) => (
-    <div style={mobile ? Styles.mobileFooterContainer : Styles.footerContainer}>
-        <FooterLink
-            url='https://www.linkedin.com/in/griffinjared/'
-            link='LinkedIn'
-            icon={<LinkedinIcon style={Styles.footerIcon}/>}
-        />
-        <FooterLink
-            url='https://github.com/jd1388'
-            link='GitHub'
-            icon={<GithubCircleIcon style={Styles.footerIcon}/>}
-        />
-        <FooterLink
-            url='mailto:griffinjared1388@gmail.com'
-            link='Email'
-            icon={<EmailIcon style={Styles.footerIcon}/>}
-        />
-    </div>
+  <div style={mobile ? Styles.mobileFooterContainer : Styles.footerContainer}>
+    <FooterLink
+      url="https://www.linkedin.com/in/griffinjared/"
+      link="LinkedIn"
+      icon={<LinkedinIcon style={Styles.footerIcon} />}
+    />
+    <FooterLink
+      url="https://github.com/jd1388"
+      link="GitHub"
+      icon={<GithubCircleIcon style={Styles.footerIcon} />}
+    />
+    <FooterLink
+      url="mailto:griffinjared1388@gmail.com"
+      link="Email"
+      icon={<EmailIcon style={Styles.footerIcon} />}
+    />
+  </div>
 );
 
 export default Footer;
