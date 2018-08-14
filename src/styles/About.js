@@ -27,7 +27,7 @@ export default {
         alignItems: 'center'
     },
     mobileHero: {
-        fontSize: '100pt',
+        fontSize: '90pt',
         color: Colors.blue,
         fontWeight: '400',
         paddingTop: '15vh',
