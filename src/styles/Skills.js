@@ -62,6 +62,6 @@ export default {
     mobileSkillEntryContainer: {
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '0 5% 5px'
+        paddingBotton: '5px'
     }
 };
