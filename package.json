@@ -6,23 +6,31 @@
   "dependencies": {
     "gh-pages": "^1.1.0",
     "mdi-react": "^3.0.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-scripts": "1.1.1"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest **/*.test.js",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build -b master",
     "lint": "eslint ."
   },
   "devDependencies": {
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0"
+    "eslint-plugin-react": "^7.11.0",
+    "jest": "^23.5.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/setup.js"
+    ]
   }
 }
