@@ -13,10 +13,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest **/*.test.js",
+    "test": "jest --testPathPattern=test/.",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build -b master",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "coverage": "jest --testPathPattern=test/. --coverage"
   },
   "devDependencies": {
     "chance": "^1.0.16",
