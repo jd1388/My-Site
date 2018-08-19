@@ -1,58 +1,10 @@
 import React from 'react';
 
-import { workExperience, schoolExperience } from '../data/Experience';
+import ExperienceSection from './helpers/ExperienceSection';
 
 import Styles from '../styles/Experience';
 
-const ExperienceEntry = ({ experience, mobile }) => {
-  const {
-    location,
-    dates,
-    position,
-    description,
-  } = experience;
-
-  if (mobile) {
-    return (
-      <div style={Styles.mobileExperienceEntryContainer}>
-        <h4 style={Styles.experienceEntryHeader}>{location}</h4>
-        <p style={Styles.experienceEntryHeader}>{position}</p>
-        <h4 style={Styles.experienceEntryDates}>{dates}</h4>
-        <p style={Styles.experienceEntryDescription}>{description}</p>
-      </div>
-    );
-  }
-
-  return (
-    <div style={Styles.experienceEntryContainer}>
-      <div style={Styles.experienceEntryLeftColumn}>
-        <h4 style={Styles.experienceEntryHeader}>{location}</h4>
-        <p style={Styles.experienceEntryDates}>{dates}</p>
-      </div>
-      <div style={Styles.experienceEntryRightColumn}>
-        <h4 style={Styles.experienceEntryHeader}>{position}</h4>
-        <p style={Styles.experienceEntryDescription}>{description}</p>
-      </div>
-    </div>
-  );
-};
-
-const ExperienceSection = ({ sectionInfo, mobile }) => {
-  const { header, experiences } = sectionInfo;
-
-  const experienceEntries = [];
-
-  experiences.forEach((experience, key) => {
-    experienceEntries.push(<ExperienceEntry experience={experience} key={`experience-entry-${key}`} mobile={mobile} />);
-  });
-
-  return (
-    <div>
-      <h3 style={mobile ? Styles.mobileSubheader : Styles.subheader}>{header}</h3>
-      {experienceEntries}
-    </div>
-  );
-};
+import { workExperience, schoolExperience } from '../data/Experience';
 
 const Experience = ({ mobile }) => {
   if (mobile) {
