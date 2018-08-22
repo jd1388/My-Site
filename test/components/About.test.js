@@ -13,7 +13,7 @@ describe('About', () => {
     const { mobile } = props;
 
     return shallow(<About mobile={mobile !== undefined ? mobile : chance.bool()} />);
-  }
+  };
 
   beforeEach(() => {
     chance = Chance();
