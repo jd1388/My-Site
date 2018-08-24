@@ -15,12 +15,12 @@ const Skill = ({
       style={
         index % 3 < 2 || mobile
           ? Styles.skillEntryHeader
-          : Object.assign({}, Styles.skillEntryHeader, { marginLeft: '7.5%' })
+          : { ...Styles.skillEntryHeader, marginLeft: '7.5%' }
       }
     >
       {skill}
     </span>
-    <div style={index % 3 < 2 && !mobile ? Object.assign({}, { marginRight: '7.5%' }) : {}}>
+    <div style={index % 3 < 2 && !mobile ? { marginRight: '7.5%' } : {}}>
       <Star strength={strength} limit={0} />
       <Star strength={strength} limit={1} />
       <Star strength={strength} limit={2} />
