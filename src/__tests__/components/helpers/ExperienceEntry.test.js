@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import ExperienceEntry from '../../../src/components/helpers/ExperienceEntry';
+import ExperienceEntry from '../../../components/helpers/ExperienceEntry';
 
-import Styles from '../../../src/styles/Experience';
+import Styles from '../../../styles/Experience';
 
 describe('Experience Entry', () => {
   let experienceEntryWrapper;

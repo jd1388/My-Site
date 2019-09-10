@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import About from '../../src/components/About';
-import Styles from '../../src/styles/About';
+import About from '../../components/About';
+import Styles from '../../styles/About';
 
 describe('About', () => {
   let aboutWrapper;

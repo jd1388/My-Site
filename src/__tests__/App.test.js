@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import App from '../src/App';
-import Styles from '../src/styles/App';
+import App from '../App';
+import Styles from '../styles/App';
 
-import About from '../src/components/About';
-import Experience from '../src/components/Experience';
-import Projects from '../src/components/Projects';
-import Skills from '../src/components/Skills';
-import Footer from '../src/components/Footer';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
+import Footer from '../components/Footer';
 
 describe('App', () => {
   let appWrapper;
