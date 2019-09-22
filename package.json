@@ -6,33 +6,38 @@
   "dependencies": {
     "gh-pages": "^1.1.0",
     "mdi-react": "^3.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --testPathPattern=test/.",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build -b master",
     "lint": "eslint .",
     "coverage": "jest --testPathPattern=test/. --coverage"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.9.0",
     "chance": "^1.0.16",
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
-    "jest": "^23.5.0"
+    "jest": "^24.8.0"
   },
-  "jest": {
-    "setupFiles": [
-      "./test/setup.js"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }

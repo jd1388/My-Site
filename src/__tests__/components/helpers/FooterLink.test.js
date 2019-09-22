@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
-import FooterLink from '../../../src/components/helpers/FooterLink';
+import FooterLink from '../../../components/helpers/FooterLink';
 
 describe('Footer Link', () => {
   let footerLinkWrapper;
