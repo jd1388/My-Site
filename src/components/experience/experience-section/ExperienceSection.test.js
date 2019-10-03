@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import ExperienceSection from '../../../components/helpers/ExperienceSection';
+import ExperienceSection from './ExperienceSection';
 
-import Styles from '../../../styles/Experience';
-import ExperienceEntry from '../../../components/helpers/ExperienceEntry';
+import Styles from '../styles';
+import ExperienceEntry from '../experience-entry';
 
 describe('Experience Section', () => {
   let experienceSectionWrapper;

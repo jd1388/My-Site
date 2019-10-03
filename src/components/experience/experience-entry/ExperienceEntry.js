@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Styles from '../../styles/Experience';
+import Styles from '../styles';
 
 const ExperienceEntry = ({ experience, mobile }) => {
   const {

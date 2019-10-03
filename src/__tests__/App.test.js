@@ -6,7 +6,7 @@ import App from '../App';
 import Styles from '../styles/App';
 
 import About from '../components/about';
-import Experience from '../components/Experience';
+import Experience from '../components/experience';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';

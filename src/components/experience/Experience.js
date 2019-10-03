@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ExperienceSection from './helpers/ExperienceSection';
+import ExperienceSection from './experience-section';
 
-import Styles from '../styles/Experience';
+import Styles from './styles';
 
-import { workExperience, schoolExperience } from '../data/Experience';
+import { workExperience, schoolExperience } from './data';
 
 const Experience = ({ mobile }) => {
   if (mobile) {

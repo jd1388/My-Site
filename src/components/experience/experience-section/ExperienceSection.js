@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ExperienceEntry from './ExperienceEntry';
-import Styles from '../../styles/Experience';
+import ExperienceEntry from '../experience-entry';
+import Styles from '../styles';
 
 const ExperienceSection = ({ sectionInfo, mobile }) => {
   const { header, experiences } = sectionInfo;
