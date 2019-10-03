@@ -6,10 +6,10 @@ import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 
-import Footer from '../../components/Footer';
+import Footer from './Footer';
 
-import FooterLink from '../../components/helpers/FooterLink';
-import Styles from '../../styles/Footer';
+import FooterLink from './footer-link';
+import Styles from './styles';
 
 describe('Footer', () => {
   let footerWrapper;

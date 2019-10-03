@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Styles from '../../styles/Footer';
+import Styles from '../styles';
 
 const FooterLink = ({ url, icon, link }) => (
   <div>

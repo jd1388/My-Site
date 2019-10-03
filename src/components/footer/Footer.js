@@ -4,9 +4,9 @@ import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 
-import FooterLink from './helpers/FooterLink';
+import FooterLink from './footer-link';
 
-import Styles from '../styles/Footer';
+import Styles from './styles';
 
 const Footer = ({ mobile }) => (
   <div style={mobile ? Styles.mobileFooterContainer : Styles.footerContainer}>

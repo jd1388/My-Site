@@ -4,7 +4,7 @@ import About from './components/about';
 import Experience from './components/experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 
 import Styles from './styles/App';
 
