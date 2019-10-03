@@ -1,8 +1,7 @@
 import React from 'react';
 
-import introduction from '../data/About';
-
-import Styles from '../styles/About';
+import introduction from './data';
+import Styles from './styles';
 
 const About = ({ mobile }) => {
   if (mobile) {

@@ -5,7 +5,7 @@ import Chance from 'chance';
 import App from '../App';
 import Styles from '../styles/App';
 
-import About from '../components/About';
+import About from '../components/about';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
