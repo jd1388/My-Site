@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Project from './helpers/Project';
+import Project from './project';
 
 import {
   terra,
@@ -8,9 +8,9 @@ import {
   giphySearch,
   codeCouch,
   walkMeHome,
-} from '../data/Projects';
+} from './data';
 
-import Styles from '../styles/Projects';
+import Styles from './styles';
 
 const Projects = ({ mobile }) => (
   <div style={Styles.projectsContainer}>

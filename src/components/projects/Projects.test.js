@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import Projects from '../../components/Projects';
+import Projects from './Projects';
 
-import Project from '../../components/helpers/Project';
-import Styles from '../../styles/Projects';
-import * as ProjectsData from '../../data/Projects';
+import Project from './project'
+import Styles from './styles';
+import * as ProjectsData from './data';
 
 describe('Projects', () => {
   let projectsWrapper;

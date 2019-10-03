@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Styles from '../../styles/Projects';
+import Styles from '../styles';
 
 const Project = ({ projectInfo, mobile }) => {
   const { name, description } = projectInfo;

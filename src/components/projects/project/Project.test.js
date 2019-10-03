@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import Project from '../../../components/helpers/Project';
+import Project from './Project';
 
-import Styles from '../../../styles/Projects';
+import Styles from '../styles';
 
 describe('Project', () => {
   let projectWrapper;
