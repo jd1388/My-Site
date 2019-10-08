@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SkillsSection from './helpers/SkillsSection';
+import SkillsSection from './skills-section';
 
-import { languageAndFrameworks, infrastructure, methodologies } from '../data/Skills';
+import { languageAndFrameworks, infrastructure, methodologies } from './data';
 
-import Styles from '../styles/Skills';
+import Styles from './styles';
 
 const Skills = ({ mobile }) => (
   <div style={Styles.skillsContainer}>

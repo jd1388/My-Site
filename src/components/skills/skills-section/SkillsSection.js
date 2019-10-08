@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Skill from './Skill';
+import Skill from './skill';
 
-import Styles from '../../styles/Skills';
+import Styles from '../styles';
 
 const SkillsSection = ({ sectionInfo, mobile }) => {
   const { header, skills } = sectionInfo;

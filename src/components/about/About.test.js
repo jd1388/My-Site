@@ -4,6 +4,7 @@ import Chance from 'chance';
 
 import About from './About';
 import Styles from './styles';
+import { Hero, AboutContainer } from './styles';
 
 describe('About', () => {
   let aboutWrapper;
@@ -21,20 +22,8 @@ describe('About', () => {
     aboutWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(aboutWrapper.type()).toEqual('div');
-  });
-
-  it('uses the correct styles for mobile', () => {
-    aboutWrapper = renderComponent({ mobile: true });
-
-    expect(aboutWrapper.props().style).toEqual(Styles.mobileAboutContainer);
-  });
-
-  it('uses the correct styles for desktop', () => {
-    aboutWrapper = renderComponent({ mobile: false });
-
-    expect(aboutWrapper.props().style).toEqual(Styles.aboutContainer);
+  it('is wrapped in an AboutContainer component', () => {
+    expect(aboutWrapper.type()).toEqual(AboutContainer);
   });
 
   describe('Hero', () => {
@@ -44,28 +33,14 @@ describe('About', () => {
       aboutHero = aboutWrapper.childAt(0);
     });
 
-    it('is an h1', () => {
-      expect(aboutHero.type()).toEqual('h1');
+    it('is a Hero', () => {
+      expect(aboutHero.type()).toEqual(Hero);
     });
 
     it('has the correct hero message', () => {
       const aboutHeroText = aboutHero.childAt(0).text();
 
       expect(aboutHeroText).toEqual('Hello!');
-    });
-
-    it('uses the correct styles for mobile', () => {
-      aboutWrapper = renderComponent({ mobile: true });
-      aboutHero = aboutWrapper.childAt(0);
-
-      expect(aboutHero.props().style).toEqual(Styles.mobileHero);
-    });
-
-    it('uses the correct styles for desktop', () => {
-      aboutWrapper = renderComponent({ mobile: false });
-      aboutHero = aboutWrapper.childAt(0);
-
-      expect(aboutHero.props().style).toEqual(Styles.hero);
     });
   });
 });

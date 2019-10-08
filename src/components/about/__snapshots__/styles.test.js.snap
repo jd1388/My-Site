@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Styles renders the AboutContainer correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "rules": Array [
+          "
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    height: 95vh;
+    min-height: 800px;
+    font-family: Roboto, sans-serif;
+
+    @media (min-width: 800px) {
+        padding: 0 25%;
+        min-height: 1000px;
+    }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`About Styles renders the Hero correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-size: 90pt;
+    color: ",
+          "#0984E3",
+          ";
+    font-weight: 400;
+    padding-top: 15vh;
+    margin-bottom: 0;
+    align-self: center;
+
+    @media (min-width: 800px) {
+        font-size: 160pt;
+        padding-top: 20vh;
+    }
+",
+        ],
+      },
+      "displayName": "styled.h1",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "h1",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`About Styles renders the SectionContent correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htpNat",
+        "isStatic": false,
+        "rules": Array [
+          "
+    text-align: justify;
+    font-weight: 300;
+    color: ",
+          "#232323",
+          ";
+    flex-grow: 1;
+    display: flex;
+    align-items: 'center';
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-htpNat",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

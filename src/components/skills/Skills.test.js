@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import Skills from '../../components/Skills';
+import Skills from './Skills';
 
-import SkillsSection from '../../components/helpers/SkillsSection';
-import * as SkillsData from '../../data/Skills';
-import Styles from '../../styles/Skills';
+import SkillsSection from './skills-section/SkillsSection';
+import * as SkillsData from './data';
+import Styles from './styles';
 
 describe('Skills', () => {
   let skillsWrapper;

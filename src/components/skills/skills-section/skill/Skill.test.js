@@ -2,10 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import Skill from '../../../components/helpers/Skill';
+import Skill from './Skill';
 
-import Styles from '../../../styles/Skills';
-import Star from '../../../components/helpers/Star';
+import Styles from '../../styles';
+import Star from './star';
 
 describe('Skill', () => {
   let skillWrapper;
