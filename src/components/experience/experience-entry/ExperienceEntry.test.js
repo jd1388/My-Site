@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import Chance from 'chance';
 
 import ExperienceEntry from './ExperienceEntry';
+import { ExperienceEntryContainer } from './styles';
 
 import Styles from '../styles';
 
@@ -33,17 +34,15 @@ describe('Experience Entry', () => {
     chance = Chance();
   });
 
+  it('is wrapped in a ExperenceEntryContainer component', () => {
+    const experienceEntryWrapper = renderComponent();
+
+    expect(experienceEntryWrapper.type()).toEqual(ExperienceEntryContainer);
+  });
+
   describe('Given the user is on a mobile device', () => {
     beforeEach(() => {
       experienceEntryWrapper = renderComponent({ mobile: true });
-    });
-
-    it('is wrapped in a div', () => {
-      expect(experienceEntryWrapper.type()).toEqual('div');
-    });
-
-    it('applies the correct styling', () => {
-      expect(experienceEntryWrapper.props().style).toEqual(Styles.mobileExperienceEntryContainer);
     });
 
     describe('Experience Entry Location', () => {
@@ -154,14 +153,6 @@ describe('Experience Entry', () => {
   describe('Given the user is on a desktop device', () => {
     beforeEach(() => {
       experienceEntryWrapper = renderComponent({ mobile: false });
-    });
-
-    it('is wrapped in a div', () => {
-      expect(experienceEntryWrapper.type()).toEqual('div');
-    });
-
-    it('applies the correct styling', () => {
-      expect(experienceEntryWrapper.props().style).toEqual(Styles.experienceEntryContainer);
     });
 
     describe('Experience Entry Left Column', () => {

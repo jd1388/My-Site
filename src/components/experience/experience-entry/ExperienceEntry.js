@@ -2,6 +2,8 @@ import React from 'react';
 
 import Styles from '../styles';
 
+import { ExperienceEntryContainer } from './styles'
+
 const ExperienceEntry = ({ experience, mobile }) => {
   const {
     location,
@@ -12,17 +14,17 @@ const ExperienceEntry = ({ experience, mobile }) => {
 
   if (mobile) {
     return (
-      <div style={Styles.mobileExperienceEntryContainer}>
+      <ExperienceEntryContainer>
         <h4 style={Styles.experienceEntryHeader}>{location}</h4>
         <p style={Styles.experienceEntryHeader}>{position}</p>
         <h4 style={Styles.experienceEntryDates}>{dates}</h4>
         <p style={Styles.experienceEntryDescription}>{description}</p>
-      </div>
+      </ExperienceEntryContainer>
     );
   }
 
   return (
-    <div style={Styles.experienceEntryContainer}>
+    <ExperienceEntryContainer>
       <div style={Styles.experienceEntryLeftColumn}>
         <h4 style={Styles.experienceEntryHeader}>{location}</h4>
         <p style={Styles.experienceEntryDates}>{dates}</p>
@@ -31,7 +33,7 @@ const ExperienceEntry = ({ experience, mobile }) => {
         <h4 style={Styles.experienceEntryHeader}>{position}</h4>
         <p style={Styles.experienceEntryDescription}>{description}</p>
       </div>
-    </div>
+    </ExperienceEntryContainer>
   );
 };
 
