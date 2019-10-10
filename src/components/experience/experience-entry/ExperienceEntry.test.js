@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Chance from 'chance';
 
 import ExperienceEntry from './ExperienceEntry';
-import { ExperienceEntryContainer } from './styles';
+import { ExperienceEntryContainer, ExperienceEntryHeader, ExperienceEntryContent } from './styles';
 
 import Styles from '../styles';
 
@@ -40,251 +40,127 @@ describe('Experience Entry', () => {
     expect(experienceEntryWrapper.type()).toEqual(ExperienceEntryContainer);
   });
 
-  describe('Given the user is on a mobile device', () => {
+  describe('Experience Entry Location', () => {
+    let experienceEntryLocation,
+      randomLocation;
+
     beforeEach(() => {
-      experienceEntryWrapper = renderComponent({ mobile: true });
+      randomLocation = chance.city();
+
+      const randomProps = {
+        experience: {
+          location: randomLocation,
+          dates: chance.string(),
+          position: chance.string(),
+          description: chance.paragraph()
+        }
+      };
+      const experienceEntryWrapper = renderComponent(randomProps);
+
+      experienceEntryLocation = experienceEntryWrapper.childAt(0);
     });
 
-    describe('Experience Entry Location', () => {
-      let experienceEntryLocation;
-
-      beforeEach(() => {
-        experienceEntryLocation = experienceEntryWrapper.childAt(0);
-      });
-
-      it('is an h4', () => {
-        expect(experienceEntryLocation.type()).toEqual('h4');
-      });
-
-      it('displays the experience data\'s location', () => {
-        const fakeLocation = chance.string();
-
-        experienceEntryWrapper = renderComponent({
-          mobile: true,
-          experience: { location: fakeLocation },
-        });
-        experienceEntryLocation = experienceEntryWrapper.childAt(0);
-
-        const experienceEntryLocationText = experienceEntryLocation.childAt(0).text();
-
-        expect(experienceEntryLocationText).toEqual(fakeLocation);
-      });
+    it('renders an ExperienceEntryHeader for the location', () => {
+      expect(experienceEntryLocation.type()).toEqual(ExperienceEntryHeader);
     });
 
-    describe('Experience Entry Position', () => {
-      let experienceEntryPosition;
+    it('displays the experience data\'s location', () => {
+      const experienceEntryLocationText = experienceEntryLocation.text();
 
-      beforeEach(() => {
-        experienceEntryPosition = experienceEntryWrapper.childAt(1);
-      });
-
-      it('is a p', () => {
-        expect(experienceEntryPosition.type()).toEqual('p');
-      });
-
-      it('displays the experience data\'s position', () => {
-        const fakePosition = chance.string();
-
-        experienceEntryWrapper = renderComponent({
-          mobile: true,
-          experience: { position: fakePosition },
-        });
-        experienceEntryPosition = experienceEntryWrapper.childAt(1);
-
-        const experienceEntryPositionText = experienceEntryPosition.childAt(0).text();
-
-        expect(experienceEntryPositionText).toEqual(fakePosition);
-      });
-    });
-
-    describe('Experience Entry Dates', () => {
-      let experienceEntryDates;
-
-      beforeEach(() => {
-        experienceEntryDates = experienceEntryWrapper.childAt(2);
-      });
-
-      it('is an h4', () => {
-        expect(experienceEntryDates.type()).toEqual('h4');
-      });
-
-      it('displays the experience data\'s dates', () => {
-        const fakeDates = chance.string();
-
-        experienceEntryWrapper = renderComponent({
-          mobile: true,
-          experience: { dates: fakeDates },
-        });
-        experienceEntryDates = experienceEntryWrapper.childAt(2);
-
-        const experienceEntryDatesText = experienceEntryDates.childAt(0).text();
-
-        expect(experienceEntryDatesText).toEqual(fakeDates);
-      });
-    });
-
-    describe('Experience Entry Description', () => {
-      let experienceEntryDescription;
-
-      beforeEach(() => {
-        experienceEntryDescription = experienceEntryWrapper.childAt(3);
-      });
-
-      it('is a p', () => {
-        expect(experienceEntryDescription.type()).toEqual('p');
-      });
-
-      it('displays the experience data\'s description', () => {
-        const fakeDescription = chance.sentence();
-
-        experienceEntryWrapper = renderComponent({
-          mobile: true,
-          experience: { description: fakeDescription },
-        });
-        experienceEntryDescription = experienceEntryWrapper.childAt(3);
-
-        const experienceEntryDescriptionText = experienceEntryDescription.childAt(0).text();
-
-        expect(experienceEntryDescriptionText).toEqual(fakeDescription);
-      });
+      expect(experienceEntryLocationText).toEqual(randomLocation);
     });
   });
 
-  describe('Given the user is on a desktop device', () => {
+  describe('Experience Entry Dates', () => {
+    let experienceEntryDates,
+      randomDates;
+
     beforeEach(() => {
-      experienceEntryWrapper = renderComponent({ mobile: false });
+      randomDates = chance.string();
+
+      const randomProps = {
+        experience: {
+          location: chance.city(),
+          dates: randomDates,
+          position: chance.string(),
+          description: chance.paragraph()
+        }
+      };
+      const experienceEntryWrapper = renderComponent(randomProps);
+
+      experienceEntryDates = experienceEntryWrapper.childAt(1);
     });
 
-    describe('Experience Entry Left Column', () => {
-      let experienceEntryLeftColumn;
-
-      beforeEach(() => {
-        experienceEntryLeftColumn = experienceEntryWrapper.childAt(0);
-      });
-
-      it('is a div', () => {
-        expect(experienceEntryLeftColumn.type()).toEqual('div');
-      });
-
-      describe('Experience Entry Location', () => {
-        let experienceEntryLocation;
-
-        beforeEach(() => {
-          experienceEntryLocation = experienceEntryLeftColumn.childAt(0);
-        });
-
-        it('is an h4', () => {
-          expect(experienceEntryLocation.type()).toEqual('h4');
-        });
-
-        it('displays the experience data\'s location', () => {
-          const fakeLocation = chance.string();
-
-          experienceEntryWrapper = renderComponent({
-            mobile: false,
-            experience: { location: fakeLocation },
-          });
-          experienceEntryLeftColumn = experienceEntryWrapper.childAt(0);
-          experienceEntryLocation = experienceEntryLeftColumn.childAt(0);
-
-          const experienceEntryLocationText = experienceEntryLocation.childAt(0).text();
-
-          expect(experienceEntryLocationText).toEqual(fakeLocation);
-        });
-      });
-
-      describe('Experience Entry Dates', () => {
-        let experienceEntryDates;
-
-        beforeEach(() => {
-          experienceEntryDates = experienceEntryLeftColumn.childAt(1);
-        });
-
-        it('is an h4', () => {
-          expect(experienceEntryDates.type()).toEqual('p');
-        });
-
-        it('displays the experience data\'s location', () => {
-          const fakeDates = chance.string();
-
-          experienceEntryWrapper = renderComponent({
-            mobile: false,
-            experience: { dates: fakeDates },
-          });
-          experienceEntryLeftColumn = experienceEntryWrapper.childAt(0);
-          experienceEntryDates = experienceEntryLeftColumn.childAt(1);
-
-          const experienceEntryDatesText = experienceEntryDates.childAt(0).text();
-
-          expect(experienceEntryDatesText).toEqual(fakeDates);
-        });
-      });
+    it('renders an ExperienceEntryHeader for the location', () => {
+      expect(experienceEntryDates.type()).toEqual(ExperienceEntryContent);
     });
 
-    describe('Experience Entry Right Column', () => {
-      let experienceEntryRightColumn;
+    it('displays the experience data\'s location', () => {
+      const experienceEntryDatesText = experienceEntryDates.text();
 
-      beforeEach(() => {
-        experienceEntryRightColumn = experienceEntryWrapper.childAt(1);
-      });
+      expect(experienceEntryDatesText).toEqual(randomDates);
+    });
+  });
 
-      it('is a div', () => {
-        expect(experienceEntryRightColumn.type()).toEqual('div');
-      });
+  describe('Experience Entry Position', () => {
+    let experienceEntryPosition,
+      randomPosition;
 
-      describe('Experience Entry Position', () => {
-        let experienceEntryPosition;
+    beforeEach(() => {
+      randomPosition = chance.string();
 
-        beforeEach(() => {
-          experienceEntryPosition = experienceEntryRightColumn.childAt(0);
-        });
+      const randomProps = {
+        experience: {
+          location: chance.city(),
+          dates: chance.string(),
+          position: randomPosition,
+          description: chance.paragraph()
+        }
+      };
+      const experienceEntryWrapper = renderComponent(randomProps);
 
-        it('is an h4', () => {
-          expect(experienceEntryPosition.type()).toEqual('h4');
-        });
+      experienceEntryPosition = experienceEntryWrapper.childAt(2);
+    });
 
-        it('displays the experience data\'s location', () => {
-          const fakePosition = chance.string();
+    it('renders an ExperienceEntryHeader for the location', () => {
+      expect(experienceEntryPosition.type()).toEqual(ExperienceEntryHeader);
+    });
 
-          experienceEntryWrapper = renderComponent({
-            mobile: false,
-            experience: { position: fakePosition },
-          });
-          experienceEntryRightColumn = experienceEntryWrapper.childAt(1);
-          experienceEntryPosition = experienceEntryRightColumn.childAt(0);
+    it('displays the experience data\'s location', () => {
+      const experienceEntryPositionText = experienceEntryPosition.text();
 
-          const experienceEntryPositionText = experienceEntryPosition.childAt(0).text();
+      expect(experienceEntryPositionText).toEqual(randomPosition);
+    });
+  });
 
-          expect(experienceEntryPositionText).toEqual(fakePosition);
-        });
-      });
+  describe('Experience Entry Description', () => {
+    let experienceEntryDescription,
+      randomDescription;
 
-      describe('Experience Entry Description', () => {
-        let experienceEntryDescription;
+    beforeEach(() => {
+      randomDescription = chance.paragraph();
 
-        beforeEach(() => {
-          experienceEntryDescription = experienceEntryRightColumn.childAt(1);
-        });
+      const randomProps = {
+        experience: {
+          location: chance.city(),
+          dates: chance.string(),
+          position: chance.string(),
+          description: randomDescription
+        }
+      };
+      const experienceEntryWrapper = renderComponent(randomProps);
 
-        it('is an h4', () => {
-          expect(experienceEntryDescription.type()).toEqual('p');
-        });
+      experienceEntryDescription = experienceEntryWrapper.childAt(3);
+    });
 
-        it('displays the experience data\'s location', () => {
-          const fakeDescription = chance.string();
+    it('renders an ExperienceEntryHeader for the location', () => {
+      expect(experienceEntryDescription.type()).toEqual(ExperienceEntryContent);
+    });
 
-          experienceEntryWrapper = renderComponent({
-            mobile: false,
-            experience: { description: fakeDescription },
-          });
-          experienceEntryRightColumn = experienceEntryWrapper.childAt(1);
-          experienceEntryDescription = experienceEntryRightColumn.childAt(1);
+    it('displays the experience data\'s location', () => {
+      const experienceEntryDescriptionText = experienceEntryDescription.text();
 
-          const experienceEntryDescriptionText = experienceEntryDescription.childAt(0).text();
-
-          expect(experienceEntryDescriptionText).toEqual(fakeDescription);
-        });
-      });
+      expect(experienceEntryDescriptionText).toEqual(randomDescription);
     });
   });
 });

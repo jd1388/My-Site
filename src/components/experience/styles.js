@@ -36,23 +36,6 @@ export default {
     display: 'flex',
     justifyContent: 'space-between',
   },
-  experienceEntryHeader: {
-    fontWeight: '400',
-  },
-  experienceEntryDates: {
-    fontWeight: '300',
-  },
-  experienceEntryDescription: {
-    fontWeight: '300',
-    textAlign: 'justify',
-  },
-  experienceEntryLeftColumn: {
-    width: '30%',
-  },
-  experienceEntryRightColumn: {
-    width: '65%',
-    paddingLeft: '5%',
-  },
   mobileExperienceContent: {
     padding: '50px 10%',
     transform: 'skewY(-2deg)',
@@ -68,8 +51,5 @@ export default {
     fontWeight: '300',
     color: Colors.white,
     fontSize: '18pt',
-  },
-  mobileExperienceEntryContainer: {
-    paddingBottom: '5px',
-  },
+  }
 };

@@ -35,3 +35,70 @@ exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 
   forwardedRef={null}
 />
 `;
+
+exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 2`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-weight: normal;
+    color: ",
+          "#FFFFFF",
+          ";
+    text-align: center;
+    font-size: 36pt;
+    margin: 0;
+",
+        ],
+      },
+      "displayName": "styled.h4",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "h4",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`Experience Entry Styles renders the ExperienceEntryContent correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htpNat",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-weight: 300;
+    text-align: justify;
+",
+        ],
+      },
+      "displayName": "styled.p",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-htpNat",
+      "target": "p",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
