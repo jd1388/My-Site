@@ -1,7 +1,8 @@
 import React from 'react';
 
 import ExperienceEntry from '../experience-entry';
-import Styles from '../styles';
+
+import { ExperienceSectionHeader } from './styles';
 
 const ExperienceSection = ({ sectionInfo, mobile }) => {
   const { header, experiences } = sectionInfo;
@@ -13,10 +14,10 @@ const ExperienceSection = ({ sectionInfo, mobile }) => {
   });
 
   return (
-    <div>
-      <h3 style={mobile ? Styles.mobileSubheader : Styles.subheader}>{header}</h3>
+    <>
+      <ExperienceSectionHeader>{header}</ExperienceSectionHeader>
       {experienceEntries}
-    </div>
+    </>
   );
 };
 

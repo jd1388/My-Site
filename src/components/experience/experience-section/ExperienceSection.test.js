@@ -2,10 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
+import { Fragment } from 'react';
+
 import ExperienceSection from './ExperienceSection';
 
-import Styles from '../styles';
 import ExperienceEntry from '../experience-entry';
+import { ExperienceSectionHeader } from './styles';
 
 describe('Experience Section', () => {
   let experienceSectionWrapper;
@@ -33,8 +35,8 @@ describe('Experience Section', () => {
     experienceSectionWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(experienceSectionWrapper.type()).toEqual('div');
+  it('is wrapped in a fragment', () => {
+    expect(experienceSectionWrapper.type()).toEqual(Fragment);
   });
 
   describe('Experience Section Header', () => {
@@ -44,8 +46,8 @@ describe('Experience Section', () => {
       experienceSectionHeader = experienceSectionWrapper.childAt(0);
     });
 
-    it('is an h3', () => {
-      expect(experienceSectionHeader.type()).toEqual('h3');
+    it('is an ExperienceSectionHeader', () => {
+      expect(experienceSectionHeader.type()).toEqual(ExperienceSectionHeader);
     });
 
     it('displays the header passed in the sectionInfo prop', () => {
