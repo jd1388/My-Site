@@ -3,9 +3,13 @@ import { shallow } from 'enzyme';
 import Chance from 'chance';
 
 import ExperienceEntry from './ExperienceEntry';
-import { ExperienceEntryContainer, ExperienceEntryHeader, ExperienceEntryContent } from './styles';
-
-import Styles from '../styles';
+import {
+  ExperienceEntryContainer,
+  ExperienceEntryHeader,
+  ExperienceEntryContent,
+  ExperienceEntryDates,
+  ExperienceEntryPosition
+} from './styles';
 
 describe('Experience Entry', () => {
   let experienceEntryWrapper;
@@ -92,7 +96,7 @@ describe('Experience Entry', () => {
     });
 
     it('renders an ExperienceEntryHeader for the location', () => {
-      expect(experienceEntryDates.type()).toEqual(ExperienceEntryContent);
+      expect(experienceEntryDates.type()).toEqual(ExperienceEntryDates);
     });
 
     it('displays the experience data\'s location', () => {
@@ -123,7 +127,7 @@ describe('Experience Entry', () => {
     });
 
     it('renders an ExperienceEntryHeader for the location', () => {
-      expect(experienceEntryPosition.type()).toEqual(ExperienceEntryHeader);
+      expect(experienceEntryPosition.type()).toEqual(ExperienceEntryPosition);
     });
 
     it('displays the experience data\'s location', () => {
