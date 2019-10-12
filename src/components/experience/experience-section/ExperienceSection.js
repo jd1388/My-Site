@@ -9,7 +9,7 @@ const ExperienceSection = ({ sectionInfo, mobile }) => {
   const experienceEntries = [];
 
   experiences.forEach((experience, key) => {
-    experienceEntries.push(<ExperienceEntry experience={experience} key={`experience-entry-${key}`} mobile={mobile} />);
+    experienceEntries.push(<ExperienceEntry experience={experience} key={`experience-entry-${key}`} />);
   });
 
   return (

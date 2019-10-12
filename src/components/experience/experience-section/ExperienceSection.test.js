@@ -18,12 +18,11 @@ describe('Experience Section', () => {
   });
 
   const renderComponent = (props = {}) => {
-    const { sectionInfo, mobile } = props;
+    const { sectionInfo } = props;
 
     return shallow(
       <ExperienceSection
         sectionInfo={generateSectionInfo(sectionInfo)}
-        mobile={mobile !== undefined ? mobile : chance.bool()}
       />,
     );
   };
@@ -59,34 +58,17 @@ describe('Experience Section', () => {
 
       expect(experienceSectionHeaderText).toEqual(fakeHeader);
     });
-
-    it('applies the correct styling on a mobile device', () => {
-      experienceSectionWrapper = renderComponent({ mobile: true });
-      experienceSectionHeader = experienceSectionWrapper.childAt(0);
-
-      expect(experienceSectionHeader.props().style).toEqual(Styles.mobileSubheader);
-    });
-
-    it('applies the correct styling on a desktop device', () => {
-      experienceSectionWrapper = renderComponent({ mobile: false });
-      experienceSectionHeader = experienceSectionWrapper.childAt(0);
-
-      expect(experienceSectionHeader.props().style).toEqual(Styles.subheader);
-    });
   });
 
   describe('Experience Entries', () => {
     let experienceEntries;
     let experiences;
-    let mobile;
 
     beforeEach(() => {
       experiences = chance.n(chance.string, chance.natural({ min: 1, max: 5 }));
-      mobile = chance.bool();
 
       experienceSectionWrapper = renderComponent({
         sectionInfo: { experiences },
-        mobile,
       });
 
       experienceEntries = [];
@@ -117,14 +99,6 @@ describe('Experience Section', () => {
 
       experienceEntries.forEach((experienceEntry, key) => {
         expect(experienceEntry.key()).toEqual(`experience-entry-${key}`);
-      });
-    });
-
-    it('provides the device context to each', () => {
-      expect.assertions(experienceEntries.length);
-
-      experienceEntries.forEach((experienceEntry) => {
-        expect(experienceEntry.props().mobile).toEqual(mobile);
       });
     });
   });

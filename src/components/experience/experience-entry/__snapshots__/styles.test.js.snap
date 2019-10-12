@@ -11,12 +11,18 @@ exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 
         "isStatic": false,
         "rules": Array [
           "
-    padding-bottom: 5px;
+    
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
 
-    @media (min-width: 880px) {
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 800px) {
+        grid-template-columns: 30% 5% 65%;
     }
 ",
         ],
@@ -51,9 +57,15 @@ exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 
     color: ",
           "#FFFFFF",
           ";
-    text-align: center;
-    font-size: 36pt;
+    text-align: left;
+    font-size: 12pt;
     margin: 0;
+    grid-column: 1;
+    margin-bottom: 8px;
+
+    @media (min-width: 800px) {
+        font-size: 16pt;
+    }
 ",
         ],
       },
@@ -85,6 +97,14 @@ exports[`Experience Entry Styles renders the ExperienceEntryContent correctly 1`
           "
     font-weight: 300;
     text-align: justify;
+    margin: 0;
+    grid-column: 1;
+    font-size: 12pt;
+
+    @media (min-width: 800px) {
+        grid-column: 3;
+        font-size: 16pt;
+    }
 ",
         ],
       },
