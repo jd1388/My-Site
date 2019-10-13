@@ -3,8 +3,7 @@ import { shallow } from 'enzyme';
 import Chance from 'chance';
 
 import Project from './Project';
-
-import Styles from '../styles';
+import { ProjectContainer, ProjectName, ProjectDescription } from './styles';
 
 describe('Project', () => {
   let projectWrapper;
@@ -33,8 +32,8 @@ describe('Project', () => {
     projectWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(projectWrapper.type()).toEqual('div');
+  it('is wrapped in a ProjectContainer', () => {
+    expect(projectWrapper.type()).toEqual(ProjectContainer);
   });
 
   describe('Project Name', () => {
@@ -44,22 +43,8 @@ describe('Project', () => {
       projectName = projectWrapper.childAt(0);
     });
 
-    it('is an h3', () => {
-      expect(projectName.type()).toEqual('h3');
-    });
-
-    it('applies the correct styling on a mobile device', () => {
-      projectWrapper = renderComponent({ mobile: true });
-      projectName = projectWrapper.childAt(0);
-
-      expect(projectName.props().style).toEqual(Styles.mobileProjectName);
-    });
-
-    it('applies the correct styling on a desktop device', () => {
-      projectWrapper = renderComponent({ mobile: false });
-      projectName = projectWrapper.childAt(0);
-
-      expect(projectName.props().style).toEqual(Styles.projectName);
+    it('is a ProjectName', () => {
+      expect(projectName.type()).toEqual(ProjectName);
     });
 
     it('displays the name passed in the projectInfo prop', () => {
@@ -81,8 +66,8 @@ describe('Project', () => {
       projectDescription = projectWrapper.childAt(1);
     });
 
-    it('is a p', () => {
-      expect(projectDescription.type()).toEqual('p');
+    it('is a ProjectDescription', () => {
+      expect(projectDescription.type()).toEqual(ProjectDescription);
     });
 
     it('uses the description passed in the projectInfo prop', () => {
