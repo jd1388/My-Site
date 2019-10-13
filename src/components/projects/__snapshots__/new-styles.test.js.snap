@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Project Styles renders the ProjectContainer correctly 1`] = `
+exports[`Projects Styles renders the ProjectsContainer correctly 1`] = `
 <StyledComponent
   forwardedComponent={
     Object {
@@ -11,11 +11,22 @@ exports[`Project Styles renders the ProjectContainer correctly 1`] = `
         "isStatic": false,
         "rules": Array [
           "
-    padding-bottom: 5px;
-
-    &:last-child {
-        padding-bottom: 0;
-    }
+    min-height: 95vh;
+    background-color: ",
+          "#575757",
+          ";
+    font-family: Roboto, sans-serif;
+    color: ",
+          "#FFFFFF",
+          ";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewY(2deg);
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.75);
+    border: 1 solid transparent;
+    padding: 5vh 0;
+    filter: url('data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"><defs><filter id=\\"gaussian_blur\\"><feGaussianBlur in=\\"SourceGraphic\\" stdDeviation=\\"0\\" /></filter></defs></svg>#gaussian_blur');
 ",
         ],
       },
@@ -34,38 +45,7 @@ exports[`Project Styles renders the ProjectContainer correctly 1`] = `
 />
 `;
 
-exports[`Project Styles renders the ProjectDescription correctly 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-htpNat",
-        "isStatic": false,
-        "rules": Array [
-          "
-    font-weight: 300;
-    text-align: justify;
-",
-        ],
-      },
-      "displayName": "styled.p",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "sc-htpNat",
-      "target": "p",
-      "toString": [Function],
-      "usesTheme": false,
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-/>
-`;
-
-exports[`Project Styles renders the ProjectName correctly 1`] = `
+exports[`Projects Styles renders the ProjectsContent correctly 1`] = `
 <StyledComponent
   forwardedComponent={
     Object {
@@ -76,23 +56,60 @@ exports[`Project Styles renders the ProjectName correctly 1`] = `
         "isStatic": false,
         "rules": Array [
           "
-    font-weight: 300;
-    font-size: 18pt;
+    padding: 50px 10%;
+    transform: skewY(-2deg);
+
+    @media (min-width: 800px) {
+        padding: 50px 25%;
+    }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`Projects Styles renders the ProjectsHeader correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htpNat",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-weight: normal;
+    font-size: 36pt;
+    margin: 0;
+    text-align: center;
     color: ",
           "#0984E3",
           ";
 
     @media (min-width: 800px) {
-        font-size: 22pt;
+        font-size: 48pt;
     }
 ",
         ],
       },
-      "displayName": "styled.h3",
+      "displayName": "styled.h2",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "sc-bwzfXH",
-      "target": "h3",
+      "styledComponentId": "sc-htpNat",
+      "target": "h2",
       "toString": [Function],
       "usesTheme": false,
       "warnTooManyClasses": [Function],

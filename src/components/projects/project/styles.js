@@ -23,4 +23,9 @@ export const ProjectName = styled.h3`
 export const ProjectDescription = styled.p`
     font-weight: 300;
     text-align: justify;
+    font-size: 12pt;
+
+    @media (min-width: 800px) {
+        font-size: 16pt;
+    }
 `;

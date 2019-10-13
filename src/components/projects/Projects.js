@@ -9,20 +9,19 @@ import {
   codeCouch,
   walkMeHome,
 } from './data';
-
-import Styles from './styles';
+import { ProjectsContainer, ProjectsContent, ProjectsHeader } from './new-styles';
 
 const Projects = ({ mobile }) => (
-  <div style={Styles.projectsContainer}>
-    <div style={mobile ? Styles.mobileProjectContent : Styles.projectContent}>
-      <h2 style={mobile ? Styles.mobileHeader : Styles.header}>Projects</h2>
+  <ProjectsContainer>
+    <ProjectsContent>
+      <ProjectsHeader>Projects</ProjectsHeader>
       <Project projectInfo={terra} mobile={mobile} />
       <Project projectInfo={bubblePopper} mobile={mobile} />
       <Project projectInfo={giphySearch} mobile={mobile} />
       <Project projectInfo={codeCouch} mobile={mobile} />
       <Project projectInfo={walkMeHome} mobile={mobile} />
-    </div>
-  </div>
+    </ProjectsContent>
+  </ProjectsContainer>
 );
 
 export default Projects;

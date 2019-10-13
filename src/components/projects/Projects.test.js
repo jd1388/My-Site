@@ -5,17 +5,15 @@ import Chance from 'chance';
 import Projects from './Projects';
 
 import Project from './project'
-import Styles from './styles';
 import * as ProjectsData from './data';
+import { ProjectsContainer, ProjectsContent, ProjectsHeader } from './new-styles';
 
 describe('Projects', () => {
   let projectsWrapper;
   let chance;
 
-  const renderComponent = (props = {}) => {
-    const { mobile } = props;
-
-    return shallow(<Projects mobile={mobile !== undefined ? mobile : chance.bool()} />);
+  const renderComponent = () => {
+    return shallow(<Projects />);
   };
 
   beforeEach(() => {
@@ -24,8 +22,8 @@ describe('Projects', () => {
     projectsWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(projectsWrapper.type()).toEqual('div');
+  it('is wrapped in a ProjectsContainer', () => {
+    expect(projectsWrapper.type()).toEqual(ProjectsContainer);
   });
 
   describe('Projects Content', () => {
@@ -35,22 +33,8 @@ describe('Projects', () => {
       projectsContent = projectsWrapper.childAt(0);
     });
 
-    it('is a div', () => {
-      expect(projectsContent.type()).toEqual('div');
-    });
-
-    it('displays correctly on a mobile device', () => {
-      projectsWrapper = renderComponent({ mobile: true });
-      projectsContent = projectsWrapper.childAt(0);
-
-      expect(projectsContent.props().style).toEqual(Styles.mobileProjectContent);
-    });
-
-    it('displays correctly on a desktop device', () => {
-      projectsWrapper = renderComponent({ mobile: false });
-      projectsContent = projectsWrapper.childAt(0);
-
-      expect(projectsContent.props().style).toEqual(Styles.projectContent);
+    it('is a ProjectsContent', () => {
+      expect(projectsContent.type()).toEqual(ProjectsContent);
     });
 
     describe('Projects Header', () => {
@@ -60,24 +44,8 @@ describe('Projects', () => {
         projectsHeader = projectsContent.childAt(0);
       });
 
-      it('is an h2', () => {
-        expect(projectsHeader.type()).toEqual('h2');
-      });
-
-      it('displays correctly on a mobile device', () => {
-        projectsWrapper = renderComponent({ mobile: true });
-        projectsContent = projectsWrapper.childAt(0);
-        projectsHeader = projectsContent.childAt(0);
-
-        expect(projectsHeader.props().style).toEqual(Styles.mobileHeader);
-      });
-
-      it('displays correctly on a desktop device', () => {
-        projectsWrapper = renderComponent({ mobile: false });
-        projectsContent = projectsWrapper.childAt(0);
-        projectsHeader = projectsContent.childAt(0);
-
-        expect(projectsHeader.props().style).toEqual(Styles.header);
+      it('is a ProjectsHeader', () => {
+        expect(projectsHeader.type()).toEqual(ProjectsHeader);
       });
 
       it('displays the correct text', () => {
@@ -103,16 +71,6 @@ describe('Projects', () => {
 
         expect(projectInfo).toEqual(ProjectsData.terra);
       });
-
-      it('passes the the kind of device as the mobile prop', () => {
-        const expectedMobile = chance.bool();
-
-        projectsWrapper = renderComponent({ mobile: expectedMobile });
-        projectsContent = projectsWrapper.childAt(0);
-        terraProject = projectsContent.childAt(1);
-
-        expect(terraProject.props().mobile).toEqual(expectedMobile);
-      });
     });
 
     describe('Bubble Popper Project', () => {
@@ -130,16 +88,6 @@ describe('Projects', () => {
         const { projectInfo } = bubblePopperProject.props();
 
         expect(projectInfo).toEqual(ProjectsData.bubblePopper);
-      });
-
-      it('passes the the kind of device as the mobile prop', () => {
-        const expectedMobile = chance.bool();
-
-        projectsWrapper = renderComponent({ mobile: expectedMobile });
-        projectsContent = projectsWrapper.childAt(0);
-        bubblePopperProject = projectsContent.childAt(2);
-
-        expect(bubblePopperProject.props().mobile).toEqual(expectedMobile);
       });
     });
 
@@ -159,16 +107,6 @@ describe('Projects', () => {
 
         expect(projectInfo).toEqual(ProjectsData.giphySearch);
       });
-
-      it('passes the the kind of device as the mobile prop', () => {
-        const expectedMobile = chance.bool();
-
-        projectsWrapper = renderComponent({ mobile: expectedMobile });
-        projectsContent = projectsWrapper.childAt(0);
-        giphySearchProject = projectsContent.childAt(3);
-
-        expect(giphySearchProject.props().mobile).toEqual(expectedMobile);
-      });
     });
 
     describe('Code Couch', () => {
@@ -187,16 +125,6 @@ describe('Projects', () => {
 
         expect(projectInfo).toEqual(ProjectsData.codeCouch);
       });
-
-      it('passes the the kind of device as the mobile prop', () => {
-        const expectedMobile = chance.bool();
-
-        projectsWrapper = renderComponent({ mobile: expectedMobile });
-        projectsContent = projectsWrapper.childAt(0);
-        codeCouchProject = projectsContent.childAt(4);
-
-        expect(codeCouchProject.props().mobile).toEqual(expectedMobile);
-      });
     });
 
     describe('WalkMeHome Project', () => {
@@ -214,16 +142,6 @@ describe('Projects', () => {
         const { projectInfo } = walkMeHomeProject.props();
 
         expect(projectInfo).toEqual(ProjectsData.walkMeHome);
-      });
-
-      it('passes the the kind of device as the mobile prop', () => {
-        const expectedMobile = chance.bool();
-
-        projectsWrapper = renderComponent({ mobile: expectedMobile });
-        projectsContent = projectsWrapper.childAt(0);
-        walkMeHomeProject = projectsContent.childAt(5);
-
-        expect(walkMeHomeProject.props().mobile).toEqual(expectedMobile);
       });
     });
   });
