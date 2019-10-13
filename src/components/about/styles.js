@@ -38,4 +38,9 @@ export const SectionContent = styled.div`
     flex-grow: 1;
     display: flex;
     align-items: center;
+    font-size: 12pt;
+
+    @media (min-width: 800px) {
+        font-size: 16pt;
+    }
 `;
