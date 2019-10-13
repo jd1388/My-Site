@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ExperienceEntry from '../experience-entry';
+import ExperienceEntry from './experience-entry';
 
 import { ExperienceSectionHeader } from './styles';
 

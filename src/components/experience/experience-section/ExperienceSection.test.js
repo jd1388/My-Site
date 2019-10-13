@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import { Fragment } from 'react';
-
 import ExperienceSection from './ExperienceSection';
-
-import ExperienceEntry from '../experience-entry';
+import ExperienceEntry from './experience-entry';
 import { ExperienceSectionHeader } from './styles';
 
 describe('Experience Section', () => {

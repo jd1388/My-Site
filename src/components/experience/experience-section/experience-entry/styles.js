@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Colors from '../../../styles/Colors';
+import Colors from '../../../../styles/Colors';
 
 export const ExperienceEntryContainer = styled.div`
     
