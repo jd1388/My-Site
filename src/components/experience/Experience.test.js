@@ -6,7 +6,7 @@ import Experience from './Experience';
 import ExperienceSection from './experience-section';
 
 import * as ExperienceData from './data';
-import Styles from './styles';
+import { ExperienceHeader, ExperienceContainer, ExperienceContent } from './styles';
 
 describe('Experience', () => {
   let experienceWrapper;
@@ -24,8 +24,8 @@ describe('Experience', () => {
     experienceWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(experienceWrapper.type()).toEqual('div');
+  it('is wrapped in an ExperienceContainer', () => {
+    expect(experienceWrapper.type()).toEqual(ExperienceContainer);
   });
 
   describe('Experience Content', () => {
@@ -35,22 +35,8 @@ describe('Experience', () => {
       experienceContent = experienceWrapper.childAt(0);
     });
 
-    it('is a div', () => {
-      expect(experienceContent.type()).toEqual('div');
-    });
-
-    it('displays correctly on a mobile device', () => {
-      experienceWrapper = renderComponent({ mobile: true });
-      experienceContent = experienceWrapper.childAt(0);
-
-      expect(experienceContent.props().style).toEqual(Styles.mobileExperienceContent);
-    });
-
-    it('displays correctly on a desktop device', () => {
-      experienceWrapper = renderComponent({ mobile: false });
-      experienceContent = experienceWrapper.childAt(0);
-
-      expect(experienceContent.props().style).toEqual(Styles.experienceContent);
+    it('is an ExperienceContent', () => {
+      expect(experienceContent.type()).toEqual(ExperienceContent);
     });
 
     describe('Experience Header', () => {
@@ -60,24 +46,8 @@ describe('Experience', () => {
         experienceHeader = experienceContent.childAt(0);
       });
 
-      it('is an h2', () => {
-        expect(experienceHeader.type()).toEqual('h2');
-      });
-
-      it('displays correctly on a mobile device', () => {
-        experienceWrapper = renderComponent({ mobile: true });
-        experienceContent = experienceWrapper.childAt(0);
-        experienceHeader = experienceContent.childAt(0);
-
-        expect(experienceHeader.props().style).toEqual(Styles.mobileHeader);
-      });
-
-      it('displays correctly on a desktop device', () => {
-        experienceWrapper = renderComponent({ mobile: false });
-        experienceContent = experienceWrapper.childAt(0);
-        experienceHeader = experienceContent.childAt(0);
-
-        expect(experienceHeader.props().style).toEqual(Styles.header);
+      it('is an ExperienceHeader', () => {
+        expect(experienceHeader.type()).toEqual(ExperienceHeader);
       });
 
       it('contains the correct header text', () => {
