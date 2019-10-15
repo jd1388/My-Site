@@ -1,27 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Skill Styles renders the SkillEntryContainer correctly 1`] = `
+exports[`Skill Section Styles renders the SkillSectionEntries correctly 1`] = `
 <StyledComponent
   forwardedComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
+        "componentId": "sc-bwzfXH",
         "isStatic": false,
         "rules": Array [
           "
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 5px;
-    width: 100%;
+    flex-wrap: wrap;
 
-    &:nth-child(3n - 1) {
-        grid-column-start: 3;
-    }
-
-    &:nth-child(3n) {
-        grid-column-start: 5;
+    @media (min-width: 800px) {
+        display: grid;
+        grid-template-columns: 30% 1fr 30% 1fr 30%;
     }
 ",
         ],
@@ -29,7 +24,7 @@ exports[`Skill Styles renders the SkillEntryContainer correctly 1`] = `
       "displayName": "styled.div",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "sc-bdVaJa",
+      "styledComponentId": "sc-bwzfXH",
       "target": "div",
       "toString": [Function],
       "usesTheme": false,
@@ -41,26 +36,34 @@ exports[`Skill Styles renders the SkillEntryContainer correctly 1`] = `
 />
 `;
 
-exports[`Skill Styles renders the SkillEntryHeader correctly 1`] = `
+exports[`Skill Section Styles renders the SkillSectionHeader correctly 1`] = `
 <StyledComponent
   forwardedComponent={
     Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "sc-bwzfXH",
+        "componentId": "sc-bdVaJa",
         "isStatic": false,
         "rules": Array [
           "
     font-weight: 300;
+    font-size: 18pt;
+    color: ",
+          "#0984E3",
+          ";
+
+    @media (min-width: 800px) {
+        font-size: 22pt;
+    }
 ",
         ],
       },
-      "displayName": "styled.span",
+      "displayName": "styled.h3",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "sc-bwzfXH",
-      "target": "span",
+      "styledComponentId": "sc-bdVaJa",
+      "target": "h3",
       "toString": [Function],
       "usesTheme": false,
       "warnTooManyClasses": [Function],

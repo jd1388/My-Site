@@ -2,7 +2,7 @@ import React from 'react';
 
 import Skill from './skill';
 
-import Styles from '../styles';
+import { SkillSectionHeader, SkillSectionEntries } from './styles';
 
 const SkillsSection = ({ sectionInfo, mobile }) => {
   const { header, skills } = sectionInfo;
@@ -20,21 +20,10 @@ const SkillsSection = ({ sectionInfo, mobile }) => {
     });
   });
 
-  if (mobile) {
-    return (
-      <div>
-        <h3 style={Styles.mobileSubheader}>{header}</h3>
-        {skillEntries}
-      </div>
-    );
-  }
-
   return (
     <div>
-      <h3 style={Styles.subheader}>{header}</h3>
-      <div style={Styles.skillEntries}>
-        {skillEntries}
-      </div>
+      <SkillSectionHeader>{header}</SkillSectionHeader>
+      <SkillSectionEntries>{skillEntries}</SkillSectionEntries>
     </div>
   );
 };
