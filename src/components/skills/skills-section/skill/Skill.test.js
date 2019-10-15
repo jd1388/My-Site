@@ -3,9 +3,8 @@ import { shallow } from 'enzyme';
 import Chance from 'chance';
 
 import Skill from './Skill';
-
-import Styles from '../../styles';
 import Star from './star';
+import { SkillEntryContainer, SkillEntryHeader } from './styles';
 
 describe('Skill', () => {
   let skillWrapper;
@@ -14,17 +13,13 @@ describe('Skill', () => {
   const renderComponent = (props = {}) => {
     const {
       skill,
-      strength,
-      index,
-      mobile,
+      strength
     } = props;
 
     return shallow(
       <Skill
         skill={skill || chance.string()}
         strength={strength !== undefined ? strength : chance.natural({ min: 0, max: 5 })}
-        index={index !== undefined ? index : chance.natural()}
-        mobile={mobile !== undefined ? mobile : chance.bool()}
       />,
     );
   };
@@ -35,20 +30,8 @@ describe('Skill', () => {
     skillWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(skillWrapper.type()).toEqual('div');
-  });
-
-  it('applies the correct styling on mobile devices', () => {
-    skillWrapper = renderComponent({ mobile: true });
-
-    expect(skillWrapper.props().style).toEqual(Styles.mobileSkillEntryContainer);
-  });
-
-  it('applies the correct styling on desktop devices', () => {
-    skillWrapper = renderComponent({ mobile: false });
-
-    expect(skillWrapper.props().style).toEqual(Styles.skillEntryContainer);
+  it('is wrapped in a SkillEntryContainer', () => {
+    expect(skillWrapper.type()).toEqual(SkillEntryContainer);
   });
 
   describe('Skill Name', () => {
@@ -58,31 +41,8 @@ describe('Skill', () => {
       skillName = skillWrapper.childAt(0);
     });
 
-    it('is a span', () => {
-      expect(skillName.type()).toEqual('span');
-    });
-
-    it('applies the correct styling when it is the first or second element in a row on a desktop device', () => {
-      const fakeIndex = chance.natural({ min: 0, max: 1 });
-
-      skillWrapper = renderComponent({ index: fakeIndex, mobile: false });
-      skillName = skillWrapper.childAt(0);
-
-      expect(skillName.props().style).toEqual(Styles.skillEntryHeader);
-    });
-
-    it('applies the correct styling on mobile devices', () => {
-      skillWrapper = renderComponent({ mobile: true });
-      skillName = skillWrapper.childAt(0);
-
-      expect(skillName.props().style).toEqual(Styles.skillEntryHeader);
-    });
-
-    it('applies the correct styling for the third element in a row on a desktop device', () => {
-      skillWrapper = renderComponent({ index: 2, mobile: false });
-      skillName = skillWrapper.childAt(0);
-
-      expect(skillName.props().style).toEqual({ ...Styles.skillEntryHeader, marginLeft: '7.5%' });
+    it('is a SkillEntryHeader', () => {
+      expect(skillName.type()).toEqual(SkillEntryHeader);
     });
   });
 
@@ -95,29 +55,6 @@ describe('Skill', () => {
 
     it('is a div', () => {
       expect(skillStarContainer.type()).toEqual('div');
-    });
-
-    it('applies the correct styling when it is the first or second element in a row on a desktop device', () => {
-      const fakeIndex = chance.natural({ min: 0, max: 1 });
-
-      skillWrapper = renderComponent({ index: fakeIndex, mobile: false });
-      skillStarContainer = skillWrapper.childAt(1);
-
-      expect(skillStarContainer.props().style).toEqual({ marginRight: '7.5%' });
-    });
-
-    it('applies the correct styling when it is the thrid element in a row on a desktop device', () => {
-      skillWrapper = renderComponent({ index: 2, mobile: false });
-      skillStarContainer = skillWrapper.childAt(1);
-
-      expect(skillStarContainer.props().style).toEqual({});
-    });
-
-    it('applies the correct styling on a mobile device', () => {
-      skillWrapper = renderComponent({ mobile: true });
-      skillStarContainer = skillWrapper.childAt(1);
-
-      expect(skillStarContainer.props().style).toEqual({});
     });
 
     describe('Stars', () => {
