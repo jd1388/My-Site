@@ -6,7 +6,7 @@ import Projects from './Projects';
 
 import Project from './project'
 import * as ProjectsData from './data';
-import { ProjectsContainer, ProjectsContent, ProjectsHeader } from './new-styles';
+import { ProjectsContainer, ProjectsContent, ProjectsHeader } from './styles';
 
 describe('Projects', () => {
   let projectsWrapper;
