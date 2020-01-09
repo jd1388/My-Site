@@ -13,7 +13,7 @@ const SkillsSection = ({ sectionInfo, mobile }) => {
   skills.forEach((skillGroup, index) => {
     skillGroup.forEach((skill) => {
       skillEntries.push(
-        <Skill skill={skill} strength={5 - index} key={key} index={key} mobile={mobile} />,
+        <Skill skill={skill} strength={5 - index} key={key} index={key} />,
       );
 
       key += 1;
@@ -21,10 +21,10 @@ const SkillsSection = ({ sectionInfo, mobile }) => {
   });
 
   return (
-    <div>
+    <>
       <SkillSectionHeader>{header}</SkillSectionHeader>
       <SkillSectionEntries>{skillEntries}</SkillSectionEntries>
-    </div>
+    </>
   );
 };
 
