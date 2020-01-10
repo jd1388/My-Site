@@ -6,7 +6,8 @@ import Skills from './Skills';
 
 import SkillsSection from './skills-section/SkillsSection';
 import * as SkillsData from './data';
-import Styles from './styles';
+import { SkillsContainer, SkillsContent } from './styles';
+import { SkillsHeader } from './styles';
 
 describe('Skills', () => {
   let skillsWrapper;
@@ -24,8 +25,8 @@ describe('Skills', () => {
     skillsWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(skillsWrapper.type()).toEqual('div');
+  it('is wrapped in a SkillsContainer', () => {
+    expect(skillsWrapper.type()).toEqual(SkillsContainer);
   });
 
   describe('Skills Content', () => {
@@ -35,22 +36,8 @@ describe('Skills', () => {
       skillsContent = skillsWrapper.childAt(0);
     });
 
-    it('is a div', () => {
-      expect(skillsContent.type()).toEqual('div');
-    });
-
-    it('displays correctly on a mobile device', () => {
-      skillsWrapper = renderComponent({ mobile: true });
-      skillsContent = skillsWrapper.childAt(0);
-
-      expect(skillsContent.props().style).toEqual(Styles.mobileSkillsContent);
-    });
-
-    it('displays correctly on a desktop device', () => {
-      skillsWrapper = renderComponent({ mobile: false });
-      skillsContent = skillsWrapper.childAt(0);
-
-      expect(skillsContent.props().style).toEqual(Styles.skillsContent);
+    it('is a SkillsContent', () => {
+      expect(skillsContent.type()).toEqual(SkillsContent);
     });
 
     describe('Skills Header', () => {
@@ -60,24 +47,8 @@ describe('Skills', () => {
         skillsHeader = skillsContent.childAt(0);
       });
 
-      it('is an h2', () => {
-        expect(skillsHeader.type()).toEqual('h2');
-      });
-
-      it('displays correctly on a mobile device', () => {
-        skillsWrapper = renderComponent({ mobile: true });
-        skillsContent = skillsWrapper.childAt(0);
-        skillsHeader = skillsContent.childAt(0);
-
-        expect(skillsHeader.props().style).toEqual(Styles.mobileHeader);
-      });
-
-      it('displays correctly on a desktop device', () => {
-        skillsWrapper = renderComponent({ mobile: false });
-        skillsContent = skillsWrapper.childAt(0);
-        skillsHeader = skillsContent.childAt(0);
-
-        expect(skillsHeader.props().style).toEqual(Styles.header);
+      it('is a SkillsHeader', () => {
+        expect(skillsHeader.type()).toEqual(SkillsHeader);
       });
 
       it('displays the correct header text', () => {
@@ -103,16 +74,6 @@ describe('Skills', () => {
 
         expect(sectionInfo).toEqual(SkillsData.languageAndFrameworks);
       });
-
-      it('passes the device context to the mobile prop', () => {
-        const passedMobile = chance.bool();
-
-        skillsWrapper = renderComponent({ mobile: passedMobile });
-        skillsContent = skillsWrapper.childAt(0);
-        languagesAndFrameworksSection = skillsContent.childAt(1);
-
-        expect(languagesAndFrameworksSection.props().mobile).toEqual(passedMobile);
-      });
     });
 
     describe('Infrastructure Section', () => {
@@ -131,16 +92,6 @@ describe('Skills', () => {
 
         expect(sectionInfo).toEqual(SkillsData.infrastructure);
       });
-
-      it('passes the device context to the mobile prop', () => {
-        const passedMobile = chance.bool();
-
-        skillsWrapper = renderComponent({ mobile: passedMobile });
-        skillsContent = skillsWrapper.childAt(0);
-        infrastructureSection = skillsContent.childAt(2);
-
-        expect(infrastructureSection.props().mobile).toEqual(passedMobile);
-      });
     });
 
     describe('Methodologies Section', () => {
@@ -158,16 +109,6 @@ describe('Skills', () => {
         const { sectionInfo } = methodologiesSection.props();
 
         expect(sectionInfo).toEqual(SkillsData.methodologies);
-      });
-
-      it('passes the device context to the mobile prop', () => {
-        const passedMobile = chance.bool();
-
-        skillsWrapper = renderComponent({ mobile: passedMobile });
-        skillsContent = skillsWrapper.childAt(0);
-        methodologiesSection = skillsContent.childAt(3);
-
-        expect(methodologiesSection.props().mobile).toEqual(passedMobile);
       });
     });
   });
