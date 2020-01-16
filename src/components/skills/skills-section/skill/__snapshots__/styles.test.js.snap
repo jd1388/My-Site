@@ -52,6 +52,7 @@ exports[`Skill Styles renders the SkillEntryHeader correctly 1`] = `
         "isStatic": false,
         "rules": Array [
           "
+    font-size: 15pt;
     font-weight: 300;
 ",
         ],

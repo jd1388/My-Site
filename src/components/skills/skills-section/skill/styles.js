@@ -16,5 +16,6 @@ export const SkillEntryContainer = styled.div`
 `;
 
 export const SkillEntryHeader = styled.span`
+    font-size: 15pt;
     font-weight: 300;
 `;
