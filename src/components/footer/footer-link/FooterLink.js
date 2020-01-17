@@ -1,18 +1,17 @@
 import React from 'react';
 
-import Styles from '../styles';
+import { Link, LinkText } from './styles';
 
 const FooterLink = ({ url, icon, link }) => (
   <div>
-    <a
+    <Link
       href={url}
       target="_blank"
       rel="noreferrer noopener"
-      style={Styles.footerLink}
     >
       <span>{icon}</span>
-      <span style={Styles.footerLinkText}>{link}</span>
-    </a>
+      <LinkText>{link}</LinkText>
+    </Link>
   </div>
 );
 

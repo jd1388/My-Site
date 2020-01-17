@@ -1,31 +1,26 @@
 import React from 'react';
 
-import LinkedinIcon from 'mdi-react/LinkedinIcon';
-import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
-import EmailIcon from 'mdi-react/EmailIcon';
-
 import FooterLink from './footer-link';
+import { FooterContainer, StyledLinkedinIcon, StyledGithubIcon, StyledEmailIcon } from './styles';
 
-import Styles from './styles';
-
-const Footer = ({ mobile }) => (
-  <div style={mobile ? Styles.mobileFooterContainer : Styles.footerContainer}>
+const Footer = () => (
+  <FooterContainer>
     <FooterLink
       url="https://www.linkedin.com/in/griffinjared/"
       link="LinkedIn"
-      icon={<LinkedinIcon style={Styles.footerIcon} />}
+      icon={<StyledLinkedinIcon />}
     />
     <FooterLink
       url="https://github.com/jd1388"
       link="GitHub"
-      icon={<GithubCircleIcon style={Styles.footerIcon} />}
+      icon={<StyledGithubIcon />}
     />
     <FooterLink
       url="mailto:griffinjared1388@gmail.com"
       link="Email"
-      icon={<EmailIcon style={Styles.footerIcon} />}
+      icon={<StyledEmailIcon />}
     />
-  </div>
+  </FooterContainer>
 );
 
 export default Footer;

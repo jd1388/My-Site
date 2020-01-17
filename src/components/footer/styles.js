@@ -1,41 +1,40 @@
+import styled from 'styled-components';
+import LinkedinIcon from 'mdi-react/LinkedinIcon';
+import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
+import EmailIcon from 'mdi-react/EmailIcon';
+
 import Colors from '../../styles/Colors';
 
-export default {
-  footerContainer: {
-    backgroundColor: Colors.gray,
-    height: '5vh',
-    minHeight: '100px',
-    color: Colors.white,
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    padding: '0 25%',
-    fontSize: '12pt',
-  },
-  footerLink: {
-    fontWeight: 300,
-    color: Colors.white,
-    textDecoration: 'none',
-    display: 'flex',
-  },
-  footerIcon: {
-    fill: Colors.white,
-    width: '20px',
-    height: '20px',
-  },
-  footerLinkText: {
-    paddingLeft: '5px',
-    paddingTop: '2px',
-  },
-  mobileFooterContainer: {
-    backgroundColor: Colors.gray,
-    height: '5vh',
-    minHeight: '100px',
-    color: Colors.white,
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    padding: '0 10%',
-    fontSize: '12pt',
-  },
-};
+export const FooterContainer = styled.div`
+    align-items: center;
+    background-color: ${Colors.gray};
+    height: 5vh;
+    min-height: 100px;
+    color: ${Colors.white};
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    font-size: 12pt;
+
+    @media (min-width: 800px) {
+        padding: 0 25%;
+    }
+`;
+
+export const StyledLinkedinIcon = styled(LinkedinIcon)`
+    fill: ${Colors.white};
+    height: 20px;
+    width: 20px;
+`;
+
+export const StyledGithubIcon = styled(GithubCircleIcon)`
+    fill: ${Colors.white};
+    height: 20px;
+    width: 20px;
+`;
+
+export const StyledEmailIcon = styled(EmailIcon)`
+    fill: ${Colors.white};
+    height: 20px;
+    width: 20px;
+`;

@@ -7,9 +7,8 @@ import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
 import EmailIcon from 'mdi-react/EmailIcon';
 
 import Footer from './Footer';
-
 import FooterLink from './footer-link';
-import Styles from './styles';
+import { FooterContainer, StyledLinkedinIcon, StyledGithubIcon, StyledEmailIcon } from './styles';
 
 describe('Footer', () => {
   let footerWrapper;
@@ -27,20 +26,8 @@ describe('Footer', () => {
     footerWrapper = renderComponent();
   });
 
-  it('is wrapped in a div', () => {
-    expect(footerWrapper.type()).toEqual('div');
-  });
-
-  it('displays correctly on a mobile device', () => {
-    footerWrapper = renderComponent({ mobile: true });
-
-    expect(footerWrapper.props().style).toEqual(Styles.mobileFooterContainer);
-  });
-
-  it('displays correctly on a desktop device', () => {
-    footerWrapper = renderComponent({ mobile: false });
-
-    expect(footerWrapper.props().style).toEqual(Styles.footerContainer);
+  it('is wrapped in a FooterContainer', () => {
+    expect(footerWrapper.type()).toEqual(FooterContainer);
   });
 
   describe('LinkedIn Link', () => {
@@ -65,7 +52,7 @@ describe('Footer', () => {
     it('uses the correct icon', () => {
       const { icon } = linkedinLink.props();
 
-      expect(icon.type).toEqual(LinkedinIcon);
+      expect(icon.type).toEqual(StyledLinkedinIcon);
     });
   });
 
@@ -91,7 +78,7 @@ describe('Footer', () => {
     it('uses the correct icon', () => {
       const { icon } = githubLink.props();
 
-      expect(icon.type).toEqual(GithubCircleIcon);
+      expect(icon.type).toEqual(StyledGithubIcon);
     });
   });
 
@@ -117,7 +104,7 @@ describe('Footer', () => {
     it('uses the correct icon', () => {
       const { icon } = emailLink.props();
 
-      expect(icon.type).toEqual(EmailIcon);
+      expect(icon.type).toEqual(StyledEmailIcon);
     });
   });
 });

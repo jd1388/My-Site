@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
+
 import FooterLink from './FooterLink';
+import { Link, LinkText } from './styles';
 
 describe('Footer Link', () => {
   let footerLinkWrapper;
@@ -36,8 +38,8 @@ describe('Footer Link', () => {
       footerLinkAnchor = footerLinkWrapper.childAt(0);
     });
 
-    it('is an a', () => {
-      expect(footerLinkAnchor.type()).toEqual('a');
+    it('is a Link', () => {
+      expect(footerLinkAnchor.type()).toEqual(Link);
     });
 
     it('uses the url passed in props for the href', () => {
@@ -78,10 +80,10 @@ describe('Footer Link', () => {
     });
 
     describe('Link Text', () => {
-      it('is a span', () => {
+      it('is a LinkText', () => {
         const footerLinkText = footerLinkAnchor.childAt(1);
 
-        expect(footerLinkText.type()).toEqual('span');
+        expect(footerLinkText.type()).toEqual(LinkText);
       });
 
       it('displays the link passed in props', () => {
