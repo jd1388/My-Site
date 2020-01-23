@@ -2,10 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Chance from 'chance';
 
-import LinkedinIcon from 'mdi-react/LinkedinIcon';
-import GithubCircleIcon from 'mdi-react/GithubCircleIcon';
-import EmailIcon from 'mdi-react/EmailIcon';
-
 import Footer from './Footer';
 import FooterLink from './footer-link';
 import { FooterContainer, StyledLinkedinIcon, StyledGithubIcon, StyledEmailIcon } from './styles';
