@@ -1,25 +1,21 @@
 import React from 'react';
 
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Footer from './components/Footer';
+import About from './components/about';
+import Experience from './components/experience';
+import Projects from './components/projects';
+import Skills from './components/skills';
+import Footer from './components/footer';
 
-import Styles from './styles/App';
+import { AppContainer } from './styles/App';
 
-const App = () => {
-  const isMobile = window.innerWidth < 800;
-
-  return (
-    <div style={isMobile ? Styles.mobileContent : Styles.content}>
-      <About mobile={isMobile} />
-      <Experience mobile={isMobile} />
-      <Projects mobile={isMobile} />
-      <Skills mobile={isMobile} />
-      <Footer mobile={isMobile} />
-    </div>
-  );
-};
+const App = () => (
+  <AppContainer>
+    <About />
+    <Experience />
+    <Projects />
+    <Skills />
+    <Footer />
+  </AppContainer>
+);
 
 export default App;

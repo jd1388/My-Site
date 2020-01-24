@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Styles renders the AppContainer correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-size: 12pt;
+    overflow: hidden;
+
+    @media (min-width: 800px) {
+      font-size: 16pt;
+    }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

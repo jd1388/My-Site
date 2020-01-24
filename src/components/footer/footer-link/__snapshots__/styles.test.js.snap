@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience Styles renders the Link correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+    color: ",
+          "#FFFFFF",
+          ";
+    display: flex;
+    font-weight: 300;
+    text-decoration: none;
+",
+        ],
+      },
+      "displayName": "styled.a",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "a",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`Experience Styles renders the LinkText correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "rules": Array [
+          "
+    padding-left: 5px;
+    padding-top: 2px;
+",
+        ],
+      },
+      "displayName": "styled.span",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "span",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

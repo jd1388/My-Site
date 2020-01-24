@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+    
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 800px) {
+        grid-template-columns: 30% 5% 65%;
+    }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`Experience Entry Styles renders the ExperienceEntryContainer correctly 2`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-weight: normal;
+    color: ",
+          "#FFFFFF",
+          ";
+    text-align: left;
+    font-size: 12pt;
+    margin: 0;
+    grid-column: 1;
+    margin-bottom: 8px;
+
+    @media (min-width: 800px) {
+        font-size: 16pt;
+    }
+",
+        ],
+      },
+      "displayName": "styled.h4",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "h4",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`Experience Entry Styles renders the ExperienceEntryContent correctly 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htpNat",
+        "isStatic": false,
+        "rules": Array [
+          "
+    font-weight: 300;
+    text-align: justify;
+    margin: 0;
+    grid-column: 1;
+    font-size: 12pt;
+
+    @media (min-width: 800px) {
+        grid-column: 3;
+        font-size: 16pt;
+    }
+",
+        ],
+      },
+      "displayName": "styled.p",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-htpNat",
+      "target": "p",
+      "toString": [Function],
+      "usesTheme": false,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
