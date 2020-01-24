@@ -1,10 +1,10 @@
-export default {
-  content: {
-    fontSize: '16pt',
-    overflow: 'hidden',
-  },
-  mobileContent: {
-    fontSize: '12pt',
-    overflow: 'hidden',
-  },
-};
+import styled from 'styled-components';
+
+export const AppContainer = styled.div`
+    font-size: 12pt;
+    overflow: hidden;
+
+    @media (min-width: 800px) {
+      font-size: 16pt;
+    }
+`;

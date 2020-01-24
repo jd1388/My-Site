@@ -6,20 +6,16 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import Footer from './components/footer';
 
-import Styles from './styles/App';
+import { AppContainer } from './styles/App';
 
-const App = () => {
-  const isMobile = window.innerWidth < 800;
-
-  return (
-    <div style={isMobile ? Styles.mobileContent : Styles.content}>
-      <About mobile={isMobile} />
-      <Experience mobile={isMobile} />
-      <Projects mobile={isMobile} />
-      <Skills mobile={isMobile} />
-      <Footer mobile={isMobile} />
-    </div>
-  );
-};
+const App = () => (
+  <AppContainer>
+    <About />
+    <Experience />
+    <Projects />
+    <Skills />
+    <Footer />
+  </AppContainer>
+);
 
 export default App;
