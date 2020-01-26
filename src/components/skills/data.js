@@ -2,9 +2,9 @@ export const languageAndFrameworks = {
   header: 'Languages & Frameworks',
   skills: [
     ['JavaScript', 'Jest', 'React', 'Redux'],
-    ['CSS', 'HTML 5', 'Mocha', 'Node', 'PHP', 'React Native', 'Sass'],
-    ['Babel', 'C', 'Express', 'Java', 'Knex', 'Laravel', 'Lumen', 'MySQL', 'Vue'],
-    ['Python'],
+    ['Babel', 'CSS', 'HTML 5', 'Node', 'React Native', 'CSS In JS'],
+    ['Apollo', 'Express', 'Gatsby', 'GraphQL', 'Knex', 'NextJS', 'Sass', 'TypeScript'],
+    ['Java', 'Laravel', 'Mocha', 'Php', 'Python', 'Vue'],
     ['Django', 'Spring'],
   ],
 };
@@ -13,9 +13,9 @@ export const infrastructure = {
   header: 'Infrastructure',
   skills: [
     [],
-    ['AWS', 'Git'],
-    ['Docker'],
-    [],
+    ['Docker', 'Git'],
+    ['AWS'],
+    ['GCP', 'Helm', 'Kubernetes'],
     [],
   ],
 };
