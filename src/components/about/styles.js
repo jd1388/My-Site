@@ -17,13 +17,13 @@ export const Hero = styled.h1`
 `;
 
 export const AboutContainer = styled.div`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0 10%;
+    font-family: Roboto, sans-serif;
     height: 95vh;
     min-height: 800px;
-    font-family: Roboto, sans-serif;
+    padding: 0 10%;
 
     @media (min-width: 800px) {
         padding: 0 25%;
