@@ -3,7 +3,7 @@ export const schoolExperience = {
   experiences: [
     {
       location: 'Iowa State University',
-      dates: 'August 2015 - Present',
+      dates: 'August 2015 - December 2019',
       position: 'Bachelor - Computer Engineering',
       description: `
         At ISU, I learned a lot about design patterns and best practices when building software. I 
@@ -28,13 +28,24 @@ export const workExperience = {
   experiences: [
     {
       location: 'Source Allies, Inc.',
+      dates: 'January 2019 - Present',
+      position: 'Software Engineer/Software Engineering Apprentice',
+      description: `
+        I work on a project for a partner with a team with engineers from both Source Allies and this partner,
+        helping to support, maintain, and innovate the partner's existing ecommerce platforms. This work involves
+        taking portions of the old ecommerse platform and migrating these features to a new application built using
+        NextJS, as well as porting these features to a mobile app written with React Native.
+      `,
+    },
+    {
+      location: 'Source Allies, Inc.',
       dates: 'May 2018 - August 2018',
       position: 'Software Engineering Apprentice',
       description: `
         I worked on a team of apprentices to create a mobile app for service technicians for John Deere 
         dealerships so that they can update their locations with details on what they are doing. The mobile 
-        app was built using React Native so that we could develop for Android and iOS at the same time. We are 
-        also using AWS lambdas to proxy OAuth 1.0a requests that we need to make to John Deere.
+        app was built using React Native so that we could develop for Android and iOS at the same time. We
+        were also using AWS lambdas to proxy OAuth 1.0a requests that we need to make to John Deere.
       `,
     },
     {
@@ -55,7 +66,7 @@ export const workExperience = {
       description: `
         I spent this summer working with a team on finishing an in-house application used by the Source 
         Allies business team to create resumes for consultants that they were trying to send to potential 
-        clients. This is where I first learned how to use React and Redux, and we used Spring for our 
+        partners. This is where I first learned how to use React and Redux, and we used Spring for our 
         Java backend. 
       `,
     },

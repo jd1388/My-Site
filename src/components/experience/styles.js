@@ -3,23 +3,20 @@ import styled from 'styled-components';
 import Colors from '../../styles/Colors';
 
 export const ExperienceContainer = styled.div`
+    align-items: center;
     background-color: ${Colors.blue};
-    width: 100%;
-    min-height: 95vh;
-    font-family: Roboto, sans-serif;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.75);
     color: ${Colors.white};
     display: flex;
+    font-family: Roboto, sans-serif;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.75);
-    transform: skewY(2deg);
+    min-height: 95vh;
     padding: 5vh 0;
-    filter: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter id="gaussian_blur"><feGaussianBlur in="SourceGraphic" stdDeviation="0" /></filter></defs></svg>#gaussian_blur');
+    width: 100%;
 `;
 
 export const ExperienceContent = styled.div`
     padding: 50px 10%;
-    transform: skewY(-2deg);
 
     @media (min-width: 800px) {
         padding: 50px 25%;
@@ -27,11 +24,11 @@ export const ExperienceContent = styled.div`
 `;
 
 export const ExperienceHeader = styled.h2`
-    font-weight: normal;
     color: ${Colors.white};
-    text-align: center;
-    margin: 0;
     font-size: 36pt;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
 
     @media (min-width: 800px) {
         font-size: 48pt;
