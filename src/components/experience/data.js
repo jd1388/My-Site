@@ -27,12 +27,24 @@ export const workExperience = {
   header: 'Career Experience',
   experiences: [
     {
+      location: 'CO-OP Financial Services',
+      dates: 'December 2020 - Present',
+      position: 'Application Developer',
+      description: `
+        CO-OP builds software that's used by thousands of credit unions across the United States that allows them
+        to compete against the big banks. I'm specifically on a team that's helping to rewrite one of CO-OP's core
+        applications used by bank tellers and customer support to assist customers. This rewrite will bring them
+        another step closer to a modern tech stack while giving them the ability to work in a cleaner code base
+        when building out new features!
+      `
+    },
+    {
       location: 'Source Allies, Inc.',
-      dates: 'January 2019 - Present',
+      dates: 'January 2019 - December 2020',
       position: 'Software Engineer/Software Engineering Apprentice',
       description: `
-        I work on a project for a partner with a team with engineers from both Source Allies and this partner,
-        helping to support, maintain, and innovate the partner's existing ecommerce platforms. This work involves
+        I worked on a project for a partner with a team with engineers from both Source Allies and this partner,
+        helping to support, maintain, and innovate the partner's existing ecommerce platforms. This work involved
         taking portions of the old ecommerse platform and migrating these features to a new application built using
         NextJS, as well as porting these features to a mobile app written with React Native.
       `,
