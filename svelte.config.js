@@ -6,7 +6,8 @@ const config = {
 	preprocess: preprocess(),
 	kit: {
 		adapter: adapter(),
-		routes: (filepath) => filepath.startsWith('_') || filepath.includes('.test.ts')
+		routes: (filepath) => ![/\.test\.ts$/, /(?:(?:^_|\/_)|(?:^\.|\/\.)(?!well-known))/]
+			.some(regex => regex.test(filepath))
 	}
 };
 
