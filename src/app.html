@@ -4,7 +4,24 @@
 		<meta charset="utf-8" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 		%svelte.head%
+		<style>
+			* {
+				color: rgb(9, 132, 227);
+				font-family: 'Fira Sans', sans-serif;
+			}
+			body {
+				background-color: rgb(255, 255, 255);
+				min-height: 100vh;
+				
+				@media (prefer-color-scheme: dark) {
+					background-color: rgb(87, 87, 87);
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div>%svelte.body%</div>
